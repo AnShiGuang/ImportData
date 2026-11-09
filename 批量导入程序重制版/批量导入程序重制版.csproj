@@ -51,7 +51,8 @@
     <Reference Include="BouncyCastle.Crypto">
       <HintPath>..\lib\BouncyCastle.Crypto.dll</HintPath>
       <Private>True</Private>
-    </Reference>    <Reference Include="SqlSugar">
+    </Reference>
+    <Reference Include="SqlSugar">
       <HintPath>..\lib\SqlSugar.dll</HintPath>
       <Private>True</Private>
     </Reference>
@@ -133,14 +134,15 @@
     </Compile>
     <Compile Include="窗体界面\OperationManualForm.Designer.cs">
       <DependentUpon>OperationManualForm.cs</DependentUpon>
-    </Compile>    <Compile Include="窗体界面\FormConfig.cs">
+    </Compile>
+    <Compile Include="窗体界面\FormConfig.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="窗体界面\FormConfig.Designer.cs">
       <DependentUpon>FormConfig.cs</DependentUpon>
     </Compile>
     <Compile Include="窗体界面\FormTips.cs">
-      <SubType>Form</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="窗体界面\FormTips.Designer.cs">
       <DependentUpon>FormTips.cs</DependentUpon>
@@ -169,14 +171,8 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\login-db-ssms.png">
-      <LogicalName>批量导入程序重制版.Resources.login-db-ssms.png</LogicalName>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\login-db-oracle.png">
-      <LogicalName>批量导入程序重制版.Resources.login-db-oracle.png</LogicalName>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\login-db-mysql.png">
-      <LogicalName>批量导入程序重制版.Resources.login-db-mysql.png</LogicalName>
+    <EmbeddedResource Include="Resources\login-security.png">
+      <LogicalName>批量导入程序重制版.Resources.login-security.png</LogicalName>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\login-bg.png">
       <LogicalName>批量导入程序重制版.Resources.login-bg.png</LogicalName>
@@ -211,6 +207,9 @@
     <EmbeddedResource Include="窗体界面\frmDatabaseConfig.resx">
       <DependentUpon>frmDatabaseConfig.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="窗体界面\FunctionPanel.resx">
+      <DependentUpon>FunctionPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="窗体界面\ImportDataForm.resx">
       <DependentUpon>ImportDataForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="窗体界面\frmMainPage.resx">
       <DependentUpon>frmMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体界面\PageFormBase.resx">
+      <DependentUpon>PageFormBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="窗体界面\ProgramLogForm.resx">
       <DependentUpon>ProgramLogForm.cs</DependentUpon>

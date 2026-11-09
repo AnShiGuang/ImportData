@@ -33,9 +33,7 @@ namespace 批量导入程序重制版
             this.windowBar = new AntdUI.PageHeader();
             this.closeButton = new AntdUI.Button();
             this.loginPanel = new AntdUI.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.securityIcon = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.securityLabel = new System.Windows.Forms.Label();
             this.loginButton = new AntdUI.Button();
@@ -55,9 +53,7 @@ namespace 批量导入程序重制版
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.windowBar.SuspendLayout();
             this.loginPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.securityIcon)).BeginInit();
             this.brandPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
@@ -100,9 +96,7 @@ namespace 批量导入程序重制版
             this.loginPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
             this.loginPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(233)))), ((int)(((byte)(238)))));
             this.loginPanel.BorderWidth = 1F;
-            this.loginPanel.Controls.Add(this.pictureBox3);
-            this.loginPanel.Controls.Add(this.pictureBox2);
-            this.loginPanel.Controls.Add(this.pictureBox1);
+            this.loginPanel.Controls.Add(this.securityIcon);
             this.loginPanel.Controls.Add(this.label5);
             this.loginPanel.Controls.Add(this.securityLabel);
             this.loginPanel.Controls.Add(this.loginButton);
@@ -121,35 +115,15 @@ namespace 批量导入程序重制版
             this.loginPanel.TabIndex = 10;
             this.loginPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LoginFormDrag_MouseDown);
             // 
-            // pictureBox3
+            // securityIcon
             // 
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(312, 417);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(19, 19);
-            this.pictureBox3.TabIndex = 420;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Visible = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(336, 417);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(19, 19);
-            this.pictureBox2.TabIndex = 419;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(54, 417);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(19, 19);
-            this.pictureBox1.TabIndex = 418;
-            this.pictureBox1.TabStop = false;
+            this.securityIcon.BackColor = System.Drawing.Color.White;
+            this.securityIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.securityIcon.Location = new System.Drawing.Point(54, 417);
+            this.securityIcon.Name = "securityIcon";
+            this.securityIcon.Size = new System.Drawing.Size(19, 19);
+            this.securityIcon.TabIndex = 418;
+            this.securityIcon.TabStop = false;
             // 
             // label5
             // 
@@ -173,7 +147,7 @@ namespace 批量导入程序重制版
             this.securityLabel.Name = "securityLabel";
             this.securityLabel.Size = new System.Drawing.Size(152, 17);
             this.securityLabel.TabIndex = 9;
-            this.securityLabel.Text = "仅体检系统授权用户可登录";
+            this.securityLabel.Text = "安全加密";
             this.securityLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LoginFormDrag_MouseDown);
             // 
             // loginButton
@@ -399,9 +373,7 @@ namespace 批量导入程序重制版
             this.windowBar.ResumeLayout(false);
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.securityIcon)).EndInit();
             this.brandPanel.ResumeLayout(false);
             this.brandPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -413,9 +385,7 @@ namespace 批量导入程序重制版
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label messageLabel;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox securityIcon;
         private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

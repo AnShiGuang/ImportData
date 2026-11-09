@@ -97,9 +97,7 @@ namespace 批量导入程序重制版
         public frmLogin()
         {
             InitializeComponent();
-            pictureBox3.BackgroundImage = LoadLoginImage("login-db-ssms.png");
-            pictureBox2.BackgroundImage = LoadLoginImage("login-db-oracle.png");
-            pictureBox1.BackgroundImage = LoadLoginImage("login-db-mysql.png");
+            securityIcon.BackgroundImage = LoadLoginImage("login-security.png");
             pictureBox4.BackgroundImage = LoadLoginImage("login-bg.png");
             userLookupTimer = new Timer(components);
             lockCountdownTimer = new Timer(components);
