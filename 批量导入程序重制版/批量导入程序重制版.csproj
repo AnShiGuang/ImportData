@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB14B4AB-26A7-4FCA-B0D6-136B5A7F892B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>批量导入程序重制版</RootNamespace>
+    <AssemblyName>批量导入程序重制版</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <LangVersion>7.3</LangVersion>
+    <TargetFrameworkProfile />
+    <RuntimeIdentifiers>win</RuntimeIdentifiers>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseWinFormsOutOfProcDesigner>True</UseWinFormsOutOfProcDesigner>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseWinFormsOutOfProcDesigner>True</UseWinFormsOutOfProcDesigner>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="AntdUI">
+      <HintPath>..\lib\AntdUI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\lib\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="核心\程序入口.cs" />
+    <Compile Include="核心\应用配置.cs" />
+    <Compile Include="核心\操作日志.cs" />
+    <Compile Include="核心\登录凭据.cs" />
+    <Compile Include="核心\登录限制.cs" />
+    <Compile Include="核心\批量导入上传服务.cs" />
+    <Compile Include="窗体界面\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体界面\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体界面\frmMainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体界面\frmMainPage.Designer.cs">
+      <DependentUpon>frmMainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体界面\frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体界面\frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体界面\ImportDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体界面\ImportDataForm.Designer.cs">
+      <DependentUpon>ImportDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体界面\ProgramLogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体界面\ProgramLogForm.Designer.cs">
+      <DependentUpon>ProgramLogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体界面\FunctionPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体界面\FunctionPanel.Designer.cs">
+      <DependentUpon>FunctionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体界面\frmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体界面\frmConfig.Designer.cs">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体界面\frmDatabaseConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体界面\PageFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ssms.png">
+      <LogicalName>批量导入程序重制版.Resources.ssms.png</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\oracle.png">
+      <LogicalName>批量导入程序重制版.Resources.oracle.png</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MYSQL.png">
+      <LogicalName>批量导入程序重制版.Resources.MYSQL.png</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\背景_小.png">
+      <LogicalName>批量导入程序重制版.Resources.背景_小.png</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\homepage-analytics.png">
+      <LogicalName>批量导入程序重制版.Resources.homepage-analytics.png</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="窗体界面\frmConfig.resx">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体界面\frmDatabaseConfig.resx">
+      <DependentUpon>frmDatabaseConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体界面\ImportDataForm.resx">
+      <DependentUpon>ImportDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体界面\frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体界面\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体界面\frmMainPage.resx">
+      <DependentUpon>frmMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体界面\ProgramLogForm.resx">
+      <DependentUpon>ProgramLogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="资源\数据导入插画.png">
+      <LogicalName>批量导入程序重制版.Resources.数据导入插画.png</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\菜单_功能.png">
+      <LogicalName>批量导入程序重制版.Resources.menu-feature.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\menu-home.png">
+      <LogicalName>批量导入程序重制版.Resources.menu-home.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\菜单_导入.png">
+      <LogicalName>批量导入程序重制版.Resources.menu-import.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\菜单_日志.png">
+      <LogicalName>批量导入程序重制版.Resources.menu-log.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\菜单_配置.png">
+      <LogicalName>批量导入程序重制版.Resources.menu-settings.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\menu-toggle.png">
+      <LogicalName>批量导入程序重制版.Resources.menu-toggle.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\config-admin-required.png">
+      <LogicalName>批量导入程序重制版.Resources.config-admin-required.png</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\功能菜单.png" />
+    <None Include="Resources\用户退出.png" />
+    <None Include="Resources\上传 %282%29.png" />
+    <None Include="Resources\功能菜单信息.png" />
+    <None Include="Resources\WEB.png" />
+    <None Include="Resources\HTTPS连接.png" />
+    <None Include="Resources\html&amp;json.png" />
+    <Content Include="操作文档\操作手册.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="操作文档\operate.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\菜单_导入1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\菜单_导入2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\登录.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\登录 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\登录 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\登录 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\查询.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\上报.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

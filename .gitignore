@@ -1,0 +1,6 @@
+**/bin/
+**/obj/
+.inspect/
+.vs/
+*.user
+*.suo
