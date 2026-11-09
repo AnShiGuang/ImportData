@@ -118,7 +118,6 @@ namespace 批量导入程序重制版
             // securityIcon
             // 
             this.securityIcon.BackColor = System.Drawing.Color.White;
-            this.securityIcon.BackgroundImage = global::批量导入程序重制版.Properties.Resources.安全;
             this.securityIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.securityIcon.Location = new System.Drawing.Point(54, 417);
             this.securityIcon.Name = "securityIcon";
