@@ -32,21 +32,22 @@ namespace 批量导入程序重制版
             this.btnLogQuery = new AntdUI.Button();
             this.btnUserOut = new AntdUI.Button();
             this.SuspendLayout();
-            //
+            // 
             // pageHeader1
-            //
+            // 
             this.pageHeader1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pageHeader1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.pageHeader1.Location = new System.Drawing.Point(0, 0);
+            this.pageHeader1.Location = new System.Drawing.Point(28, 28);
             this.pageHeader1.MaximizeBox = false;
             this.pageHeader1.MinimizeBox = false;
             this.pageHeader1.Name = "pageHeader1";
             this.pageHeader1.ShowButton = true;
-            this.pageHeader1.Size = new System.Drawing.Size(918, 40);
+            this.pageHeader1.Size = new System.Drawing.Size(862, 40);
+            this.pageHeader1.TabIndex = 0;
             this.pageHeader1.Text = " 功能面板：";
-            //
+            // 
             // btnCreateConfig
-            //
+            // 
             this.btnCreateConfig.BackActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnCreateConfig.BackHover = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnCreateConfig.BorderWidth = 1F;
@@ -57,11 +58,12 @@ namespace 批量导入程序重制版
             this.btnCreateConfig.Location = new System.Drawing.Point(48, 80);
             this.btnCreateConfig.Name = "btnCreateConfig";
             this.btnCreateConfig.Size = new System.Drawing.Size(240, 56);
+            this.btnCreateConfig.TabIndex = 1;
             this.btnCreateConfig.Text = "新增标识";
             this.btnCreateConfig.Click += new System.EventHandler(this.btnCreateConfig_Click);
-            //
+            // 
             // btnUpdateConfig
-            //
+            // 
             this.btnUpdateConfig.BackActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnUpdateConfig.BackHover = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnUpdateConfig.BorderWidth = 1F;
@@ -72,11 +74,12 @@ namespace 批量导入程序重制版
             this.btnUpdateConfig.Location = new System.Drawing.Point(48, 180);
             this.btnUpdateConfig.Name = "btnUpdateConfig";
             this.btnUpdateConfig.Size = new System.Drawing.Size(240, 56);
+            this.btnUpdateConfig.TabIndex = 2;
             this.btnUpdateConfig.Text = "修改标识";
             this.btnUpdateConfig.Click += new System.EventHandler(this.btnUpdateConfig_Click);
-            //
+            // 
             // btnDeleteConfig
-            //
+            // 
             this.btnDeleteConfig.BackActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnDeleteConfig.BackHover = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnDeleteConfig.BorderWidth = 1F;
@@ -87,11 +90,12 @@ namespace 批量导入程序重制版
             this.btnDeleteConfig.Location = new System.Drawing.Point(48, 280);
             this.btnDeleteConfig.Name = "btnDeleteConfig";
             this.btnDeleteConfig.Size = new System.Drawing.Size(240, 56);
+            this.btnDeleteConfig.TabIndex = 3;
             this.btnDeleteConfig.Text = "删除标识";
             this.btnDeleteConfig.Click += new System.EventHandler(this.btnDeleteConfig_Click);
-            //
+            // 
             // btnEnabledConfig
-            //
+            // 
             this.btnEnabledConfig.BackActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnEnabledConfig.BackHover = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnEnabledConfig.BorderWidth = 1F;
@@ -102,11 +106,12 @@ namespace 批量导入程序重制版
             this.btnEnabledConfig.Location = new System.Drawing.Point(48, 380);
             this.btnEnabledConfig.Name = "btnEnabledConfig";
             this.btnEnabledConfig.Size = new System.Drawing.Size(240, 56);
+            this.btnEnabledConfig.TabIndex = 4;
             this.btnEnabledConfig.Text = "隐藏标识";
             this.btnEnabledConfig.Click += new System.EventHandler(this.btnEnabledConfig_Click);
-            //
+            // 
             // btnAutoImport
-            //
+            // 
             this.btnAutoImport.BackActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnAutoImport.BackHover = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnAutoImport.BorderWidth = 1F;
@@ -118,10 +123,11 @@ namespace 批量导入程序重制版
             this.btnAutoImport.Location = new System.Drawing.Point(339, 80);
             this.btnAutoImport.Name = "btnAutoImport";
             this.btnAutoImport.Size = new System.Drawing.Size(240, 56);
+            this.btnAutoImport.TabIndex = 5;
             this.btnAutoImport.Text = "自动导入数据（未开放）";
-            //
+            // 
             // btnRawQuery
-            //
+            // 
             this.btnRawQuery.BackActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnRawQuery.BackHover = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnRawQuery.BorderWidth = 1F;
@@ -133,10 +139,11 @@ namespace 批量导入程序重制版
             this.btnRawQuery.Location = new System.Drawing.Point(339, 180);
             this.btnRawQuery.Name = "btnRawQuery";
             this.btnRawQuery.Size = new System.Drawing.Size(240, 56);
+            this.btnRawQuery.TabIndex = 6;
             this.btnRawQuery.Text = "原始数据查询（未开放）";
-            //
+            // 
             // btnDbQuery
-            //
+            // 
             this.btnDbQuery.BackActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnDbQuery.BackHover = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnDbQuery.BorderWidth = 1F;
@@ -148,10 +155,11 @@ namespace 批量导入程序重制版
             this.btnDbQuery.Location = new System.Drawing.Point(339, 280);
             this.btnDbQuery.Name = "btnDbQuery";
             this.btnDbQuery.Size = new System.Drawing.Size(240, 56);
+            this.btnDbQuery.TabIndex = 7;
             this.btnDbQuery.Text = "数据库查询器（未开放）";
-            //
+            // 
             // btnResetConfig
-            //
+            // 
             this.btnResetConfig.BackActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnResetConfig.BackHover = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnResetConfig.BorderWidth = 1F;
@@ -163,10 +171,11 @@ namespace 批量导入程序重制版
             this.btnResetConfig.Location = new System.Drawing.Point(339, 380);
             this.btnResetConfig.Name = "btnResetConfig";
             this.btnResetConfig.Size = new System.Drawing.Size(240, 56);
+            this.btnResetConfig.TabIndex = 8;
             this.btnResetConfig.Text = "恢复默认配置（未开放）";
-            //
+            // 
             // btnGlobalConfig
-            //
+            // 
             this.btnGlobalConfig.BackActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnGlobalConfig.BackHover = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnGlobalConfig.BorderWidth = 1F;
@@ -178,10 +187,11 @@ namespace 批量导入程序重制版
             this.btnGlobalConfig.Location = new System.Drawing.Point(630, 80);
             this.btnGlobalConfig.Name = "btnGlobalConfig";
             this.btnGlobalConfig.Size = new System.Drawing.Size(240, 56);
+            this.btnGlobalConfig.TabIndex = 9;
             this.btnGlobalConfig.Text = "全局配置（未开放）";
-            //
+            // 
             // btnAutostart
-            //
+            // 
             this.btnAutostart.BackActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnAutostart.BackHover = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnAutostart.BorderWidth = 1F;
@@ -193,10 +203,11 @@ namespace 批量导入程序重制版
             this.btnAutostart.Location = new System.Drawing.Point(630, 180);
             this.btnAutostart.Name = "btnAutostart";
             this.btnAutostart.Size = new System.Drawing.Size(240, 56);
+            this.btnAutostart.TabIndex = 10;
             this.btnAutostart.Text = "开机启动（未开放）";
-            //
+            // 
             // btnLogQuery
-            //
+            // 
             this.btnLogQuery.BackActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnLogQuery.BackHover = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnLogQuery.BorderWidth = 1F;
@@ -208,10 +219,11 @@ namespace 批量导入程序重制版
             this.btnLogQuery.Location = new System.Drawing.Point(630, 280);
             this.btnLogQuery.Name = "btnLogQuery";
             this.btnLogQuery.Size = new System.Drawing.Size(240, 56);
+            this.btnLogQuery.TabIndex = 11;
             this.btnLogQuery.Text = "日志查询（未开放）";
-            //
+            // 
             // btnUserOut
-            //
+            // 
             this.btnUserOut.BackActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnUserOut.BackHover = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnUserOut.BorderWidth = 1F;
@@ -219,14 +231,15 @@ namespace 批量导入程序重制版
             this.btnUserOut.Icon = global::批量导入程序重制版.Properties.Resources.FuncLogout;
             this.btnUserOut.IconRatio = 0.9F;
             this.btnUserOut.IsLink = true;
-            this.btnUserOut.Location = new System.Drawing.Point(630, 480);
+            this.btnUserOut.Location = new System.Drawing.Point(630, 380);
             this.btnUserOut.Name = "btnUserOut";
             this.btnUserOut.Size = new System.Drawing.Size(240, 56);
+            this.btnUserOut.TabIndex = 12;
             this.btnUserOut.Text = "注销登录";
             this.btnUserOut.Click += new System.EventHandler(this.btnUserOut_Click);
-            //
+            // 
             // FunctionPanel
-            //
+            // 
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(918, 680);
             this.Controls.Add(this.pageHeader1);
@@ -246,6 +259,7 @@ namespace 批量导入程序重制版
             this.Padding = new System.Windows.Forms.Padding(28);
             this.Text = "功能面板";
             this.ResumeLayout(false);
+
         }
     }
 }
