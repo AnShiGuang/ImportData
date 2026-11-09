@@ -118,6 +118,7 @@ namespace 批量导入程序重制版
             // securityIcon
             // 
             this.securityIcon.BackColor = System.Drawing.Color.White;
+            this.securityIcon.BackgroundImage = global::批量导入程序重制版.Properties.Resources.安全;
             this.securityIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.securityIcon.Location = new System.Drawing.Point(54, 417);
             this.securityIcon.Name = "securityIcon";
@@ -147,7 +148,7 @@ namespace 批量导入程序重制版
             this.securityLabel.Name = "securityLabel";
             this.securityLabel.Size = new System.Drawing.Size(152, 17);
             this.securityLabel.TabIndex = 9;
-            this.securityLabel.Text = "安全加密";
+            this.securityLabel.Text = "仅体检系统授权用户可登录";
             this.securityLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LoginFormDrag_MouseDown);
             // 
             // loginButton
@@ -270,7 +271,7 @@ namespace 批量导入程序重制版
             this.subtitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(128)))), ((int)(((byte)(139)))));
             this.subtitleLabel.Location = new System.Drawing.Point(51, 79);
             this.subtitleLabel.Name = "subtitleLabel";
-            this.subtitleLabel.Size = new System.Drawing.Size(151, 17);
+            this.subtitleLabel.Size = new System.Drawing.Size(163, 17);
             this.subtitleLabel.TabIndex = 2;
             this.subtitleLabel.Text = "批量导入程序重制版 · 请登录";
             this.subtitleLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LoginFormDrag_MouseDown);
@@ -298,7 +299,7 @@ namespace 批量导入程序重制版
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
             this.label2.Location = new System.Drawing.Point(58, 93);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(201, 15);
+            this.label2.Size = new System.Drawing.Size(115, 15);
             this.label2.TabIndex = 416;
             this.label2.Text = "批量导入程序重制版";
             this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LoginFormDrag_MouseDown);
@@ -311,7 +312,7 @@ namespace 批量导入程序重制版
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
             this.label1.Location = new System.Drawing.Point(54, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 31);
+            this.label1.Size = new System.Drawing.Size(230, 31);
             this.label1.TabIndex = 415;
             this.label1.Text = "批量导入程序重制版";
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LoginFormDrag_MouseDown);

@@ -117,24 +117,120 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-    <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="确认白色" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\确认白色.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="关闭结束" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\关闭结束.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HomeIllustration" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home-illustration.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="圆桌" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\圆桌.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FuncLogQuery" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\func-log-query.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="NavToggleExpanded" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nav-toggle-expanded.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BtnLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn-login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="新建" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\新建.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FuncCreate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\func-create.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NavMenuTitle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nav-menu-title.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="NavLogout" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nav-logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FuncRawQuery" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\func-raw-query.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="科室" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\科室.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="下一页" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\下一页.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FuncGlobalConfig" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\func-global-config.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="条码" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\条码.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NavHome" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nav-home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BtnUpload" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn-upload.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NavFeature" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nav-feature.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="连接" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\连接.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NavLogout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nav-logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FuncResetConfig" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\func-reset-config.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="显示" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\显示.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FuncLogout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\func-logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FuncEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\func-edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BtnLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn-login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FuncHide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\func-hide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="删除" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\删除.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="标识解析" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\标识解析.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FuncDelete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\func-delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="NavImport" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nav-import.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FuncDbQuery" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\func-db-query.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="报告详情" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\报告详情.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FuncAutostart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\func-autostart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="上一页" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\上一页.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="修改编辑" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\修改编辑.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="完成" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\完成.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BtnSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn-search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FuncAutoImport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\func-auto-import.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NavLog" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nav-log.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,103 +238,10 @@
   <data name="NavSettings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nav-settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="NavHome" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nav-home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HomeIllustration" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home-illustration.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BtnSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn-search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BtnUpload" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn-upload.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FuncCreate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\func-create.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FuncEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\func-edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FuncDelete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\func-delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FuncHide" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\func-hide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FuncAutoImport" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\func-auto-import.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FuncRawQuery" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\func-raw-query.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FuncDbQuery" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\func-db-query.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FuncResetConfig" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\func-reset-config.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FuncGlobalConfig" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\func-global-config.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FuncAutostart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\func-autostart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FuncLogQuery" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\func-log-query.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FuncLogout" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\func-logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="显示" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\显示.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="隐藏" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\隐藏.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="删除" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\删除.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="修改编辑" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\修改编辑.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="确认白色" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\确认白色.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="圆桌" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\圆桌.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="关闭结束" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\关闭结束.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="key" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\key.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="连接" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\连接.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="完成" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\完成.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="报告详情" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\报告详情.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="标识解析" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\标识解析.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="条码" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\条码.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="上一页" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\上一页.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="下一页" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\下一页.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="科室" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\科室.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="新建" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\新建.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="安全" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\安全.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

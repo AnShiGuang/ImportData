@@ -96,8 +96,7 @@ namespace 批量导入程序重制版
 
         public frmLogin()
         {
-            InitializeComponent();
-            securityIcon.BackgroundImage = LoadLoginImage("login-security.png");
+            InitializeComponent(); 
             pictureBox4.BackgroundImage = LoadLoginImage("login-bg.png");
             userLookupTimer = new Timer(components);
             lockCountdownTimer = new Timer(components);
