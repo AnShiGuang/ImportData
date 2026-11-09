@@ -102,6 +102,12 @@
     <Compile Include="窗体界面\FunctionPanel.Designer.cs">
       <DependentUpon>FunctionPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="窗体界面\OperationManualForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体界面\OperationManualForm.Designer.cs">
+      <DependentUpon>OperationManualForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="窗体界面\frmConfig.cs">
       <SubType>Form</SubType>
     </Compile>

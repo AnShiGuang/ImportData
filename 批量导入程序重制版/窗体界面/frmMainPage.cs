@@ -64,6 +64,7 @@ namespace 批量导入程序重制版
         private ImportDataForm _importDataForm;
         private ProgramLogForm _programLogForm;
         private FunctionPanel _functionPanelForm;
+        private OperationManualForm _operationManualForm;
         private frmConfig _configForm;
         private Panel _configPermissionPromptPanel;
         private FlowLayoutPanel _configPermissionPromptContent;
@@ -105,8 +106,9 @@ namespace 批量导入程序重制版
             _programLogForm = new ProgramLogForm(_logUserName);
             _programLogForm.FunctionPanelRequested += programLogForm_FunctionPanelRequested;
             _functionPanelForm = new FunctionPanel();
+            _operationManualForm = new OperationManualForm();
             _configForm = new frmConfig(_logUserName);
-            foreach (Form child in new Form[] { _homeForm, _importDataForm, _programLogForm, _functionPanelForm, _configForm })
+            foreach (Form child in new Form[] { _homeForm, _importDataForm, _programLogForm, _functionPanelForm, _operationManualForm, _configForm })
             {
                 child.TopLevel = false;
                 child.FormBorderStyle = FormBorderStyle.None;
@@ -255,7 +257,7 @@ namespace 批量导入程序重制版
 
         private void programLogForm_FunctionPanelRequested(object sender, EventArgs e)
         {
-            ShowChild(_functionPanelForm);
+            ShowChild(_operationManualForm);
         }
 
         private async void mainPage_LogoutButton_Click(object sender, EventArgs e)
@@ -376,8 +378,6 @@ namespace 批量导入程序重制版
                 foreach (var button in _navigationButtons) button.Text = string.Empty;
                 logoutButton.Text = string.Empty;
                 toggleSidebarButton.Text = string.Empty;
-                toggleSidebarButton.IconSvg = null;
-                toggleSidebarButton.Icon = _collapsedToggleIcon;
                 _sidebarCollapseDelayTicks = 5;
             }
             else
@@ -420,6 +420,7 @@ namespace 批量导入程序重制版
             {
                 button1.IconSize = GetCollapsingIconSize(_menuTitleButtonIconSize, progress);
                 logoutButton.IconSize = GetCollapsingIconSize(_logoutButtonIconSize, progress);
+                toggleSidebarButton.IconSize = GetCollapsingIconSize(_toggleButtonIconSize, progress);
             }
             navigationGroupPanel.Width = (int)Math.Round(48 + (_navigationGroupBounds.Width - 48) * progress);
             button1.Width = (int)Math.Round(48 + (_menuTitleButtonBounds.Width - 48) * progress);
