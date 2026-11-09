@@ -132,31 +132,42 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\ssms.png">
-      <LogicalName>批量导入程序重制版.Resources.ssms.png</LogicalName>
+    <EmbeddedResource Include="Resources\login-db-ssms.png">
+      <LogicalName>批量导入程序重制版.Resources.login-db-ssms.png</LogicalName>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\oracle.png">
-      <LogicalName>批量导入程序重制版.Resources.oracle.png</LogicalName>
+    <EmbeddedResource Include="Resources\login-db-oracle.png">
+      <LogicalName>批量导入程序重制版.Resources.login-db-oracle.png</LogicalName>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\MYSQL.png">
-      <LogicalName>批量导入程序重制版.Resources.MYSQL.png</LogicalName>
+    <EmbeddedResource Include="Resources\login-db-mysql.png">
+      <LogicalName>批量导入程序重制版.Resources.login-db-mysql.png</LogicalName>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\背景_小.png">
-      <LogicalName>批量导入程序重制版.Resources.背景_小.png</LogicalName>
+    <EmbeddedResource Include="Resources\login-bg.png">
+      <LogicalName>批量导入程序重制版.Resources.login-bg.png</LogicalName>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\homepage-analytics.png">
-      <LogicalName>批量导入程序重制版.Resources.homepage-analytics.png</LogicalName>
+    <EmbeddedResource Include="Resources\home-illustration.png">
+      <LogicalName>批量导入程序重制版.Resources.home-illustration.png</LogicalName>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
+    <EmbeddedResource Include="Resources\nav-feature.png">
+      <LogicalName>批量导入程序重制版.Resources.nav-feature.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\nav-home.png">
+      <LogicalName>批量导入程序重制版.Resources.nav-home.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\nav-import-collapsed.png">
+      <LogicalName>批量导入程序重制版.Resources.nav-import-collapsed.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\nav-log.png">
+      <LogicalName>批量导入程序重制版.Resources.nav-log.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\nav-settings.png">
+      <LogicalName>批量导入程序重制版.Resources.nav-settings.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\nav-toggle-collapsed.png">
+      <LogicalName>批量导入程序重制版.Resources.nav-toggle-collapsed.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\config-admin-required.png">
+      <LogicalName>批量导入程序重制版.Resources.config-admin-required.png</LogicalName>
+    </EmbeddedResource>
     <EmbeddedResource Include="窗体界面\frmConfig.resx">
       <DependentUpon>frmConfig.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,71 +189,14 @@
     <EmbeddedResource Include="窗体界面\ProgramLogForm.resx">
       <DependentUpon>ProgramLogForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="资源\数据导入插画.png">
-      <LogicalName>批量导入程序重制版.Resources.数据导入插画.png</LogicalName>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\菜单_功能.png">
-      <LogicalName>批量导入程序重制版.Resources.menu-feature.png</LogicalName>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\menu-home.png">
-      <LogicalName>批量导入程序重制版.Resources.menu-home.png</LogicalName>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\菜单_导入.png">
-      <LogicalName>批量导入程序重制版.Resources.menu-import.png</LogicalName>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\菜单_日志.png">
-      <LogicalName>批量导入程序重制版.Resources.menu-log.png</LogicalName>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\菜单_配置.png">
-      <LogicalName>批量导入程序重制版.Resources.menu-settings.png</LogicalName>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\menu-toggle.png">
-      <LogicalName>批量导入程序重制版.Resources.menu-toggle.png</LogicalName>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\config-admin-required.png">
-      <LogicalName>批量导入程序重制版.Resources.config-admin-required.png</LogicalName>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\功能菜单.png" />
-    <None Include="Resources\用户退出.png" />
-    <None Include="Resources\上传 %282%29.png" />
-    <None Include="Resources\功能菜单信息.png" />
-    <None Include="Resources\WEB.png" />
-    <None Include="Resources\HTTPS连接.png" />
-    <None Include="Resources\html&amp;json.png" />
     <Content Include="操作文档\操作手册.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="操作文档\operate.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\菜单_导入1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\菜单_导入2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\登录.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\登录 %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\登录 %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\登录 %283%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\查询.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\上报.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

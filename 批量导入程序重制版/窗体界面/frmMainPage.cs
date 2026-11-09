@@ -313,13 +313,13 @@ namespace 批量导入程序重制版
             _originalPaddings = Array.ConvertAll(_allMenuButtons, button => button.Padding);
             _legacyMenuIcons = new[]
             {
-                LoadMenuIcon("menu-home.png"),
-                LoadMenuIcon("menu-import.png"),
-                LoadMenuIcon("menu-log.png"),
-                LoadMenuIcon("menu-feature.png"),
-                LoadMenuIcon("menu-settings.png")
+                LoadMenuIcon("nav-home.png"),
+                LoadMenuIcon("nav-import-collapsed.png"),
+                LoadMenuIcon("nav-log.png"),
+                LoadMenuIcon("nav-feature.png"),
+                LoadMenuIcon("nav-settings.png")
             };
-            _collapsedToggleIcon = LoadMenuIcon("menu-toggle.png");
+            _collapsedToggleIcon = LoadMenuIcon("nav-toggle-collapsed.png");
             _toggleButtonBounds = toggleSidebarButton.Bounds;
             _toggleButtonText = toggleSidebarButton.Text;
             _toggleButtonIconSvg = toggleSidebarButton.IconSvg;

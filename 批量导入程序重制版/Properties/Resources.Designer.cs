@@ -32,6 +32,7 @@ namespace 批量导入程序重制版.Properties {
         internal Resources() {
         }
         
+                
         /// <summary>
         ///   返回此类使用的缓存的 ResourceManager 实例。
         /// </summary>
@@ -58,14 +59,12 @@ namespace 批量导入程序重制版.Properties {
             set {
                 resourceCulture = value;
             }
-        }
-        
-        /// <summary>
+        }/// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap homepage_analytics {
+        internal static System.Drawing.Bitmap NavToggleExpanded {
             get {
-                object obj = ResourceManager.GetObject("homepage-analytics", resourceCulture);
+                object obj = ResourceManager.GetObject("NavToggleExpanded", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +72,9 @@ namespace 批量导入程序重制版.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap html_json {
+        internal static System.Drawing.Bitmap BtnLogin {
             get {
-                object obj = ResourceManager.GetObject("html&json", resourceCulture);
+                object obj = ResourceManager.GetObject("BtnLogin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +82,9 @@ namespace 批量导入程序重制版.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap HTTPS连接 {
+        internal static System.Drawing.Bitmap NavMenuTitle {
             get {
-                object obj = ResourceManager.GetObject("HTTPS连接", resourceCulture);
+                object obj = ResourceManager.GetObject("NavMenuTitle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +92,9 @@ namespace 批量导入程序重制版.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap menu_home {
+        internal static System.Drawing.Bitmap NavLogout {
             get {
-                object obj = ResourceManager.GetObject("menu-home", resourceCulture);
+                object obj = ResourceManager.GetObject("NavLogout", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +102,9 @@ namespace 批量导入程序重制版.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap WEB {
+        internal static System.Drawing.Bitmap NavFeature {
             get {
-                object obj = ResourceManager.GetObject("WEB", resourceCulture);
+                object obj = ResourceManager.GetObject("NavFeature", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +112,9 @@ namespace 批量导入程序重制版.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap 上传__2_ {
+        internal static System.Drawing.Bitmap NavImport {
             get {
-                object obj = ResourceManager.GetObject("上传 (2)", resourceCulture);
+                object obj = ResourceManager.GetObject("NavImport", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +122,9 @@ namespace 批量导入程序重制版.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap 上报 {
+        internal static System.Drawing.Bitmap NavLog {
             get {
-                object obj = ResourceManager.GetObject("上报", resourceCulture);
+                object obj = ResourceManager.GetObject("NavLog", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +132,9 @@ namespace 批量导入程序重制版.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap 功能菜单 {
+        internal static System.Drawing.Bitmap NavSettings {
             get {
-                object obj = ResourceManager.GetObject("功能菜单", resourceCulture);
+                object obj = ResourceManager.GetObject("NavSettings", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +142,9 @@ namespace 批量导入程序重制版.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap 功能菜单信息 {
+        internal static System.Drawing.Bitmap NavHome {
             get {
-                object obj = ResourceManager.GetObject("功能菜单信息", resourceCulture);
+                object obj = ResourceManager.GetObject("NavHome", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +152,9 @@ namespace 批量导入程序重制版.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap 导入 {
+        internal static System.Drawing.Bitmap HomeIllustration {
             get {
-                object obj = ResourceManager.GetObject("导入", resourceCulture);
+                object obj = ResourceManager.GetObject("HomeIllustration", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +162,9 @@ namespace 批量导入程序重制版.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap 查询 {
+        internal static System.Drawing.Bitmap BtnSearch {
             get {
-                object obj = ResourceManager.GetObject("查询", resourceCulture);
+                object obj = ResourceManager.GetObject("BtnSearch", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,111 +172,12 @@ namespace 批量导入程序重制版.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap 用户退出 {
+        internal static System.Drawing.Bitmap BtnUpload {
             get {
-                object obj = ResourceManager.GetObject("用户退出", resourceCulture);
+                object obj = ResourceManager.GetObject("BtnUpload", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 登录 {
-            get {
-                object obj = ResourceManager.GetObject("登录", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 登录__1_ {
-            get {
-                object obj = ResourceManager.GetObject("登录 (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 登录__2_ {
-            get {
-                object obj = ResourceManager.GetObject("登录 (2)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 登录__3_ {
-            get {
-                object obj = ResourceManager.GetObject("登录 (3)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 菜单_功能 {
-            get {
-                object obj = ResourceManager.GetObject("菜单_功能", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 菜单_导入 {
-            get {
-                object obj = ResourceManager.GetObject("菜单_导入", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 菜单_导入1 {
-            get {
-                object obj = ResourceManager.GetObject("菜单_导入1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 菜单_导入2 {
-            get {
-                object obj = ResourceManager.GetObject("菜单_导入2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 菜单_日志 {
-            get {
-                object obj = ResourceManager.GetObject("菜单_日志", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 菜单_配置 {
-            get {
-                object obj = ResourceManager.GetObject("菜单_配置", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

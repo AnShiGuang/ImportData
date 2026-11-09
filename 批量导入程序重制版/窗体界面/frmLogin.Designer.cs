@@ -183,7 +183,7 @@ namespace 批量导入程序重制版
             this.loginButton.DefaultBack = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(145)))), ((int)(((byte)(112)))));
             this.loginButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.loginButton.ForeColor = System.Drawing.Color.White;
-            this.loginButton.Icon = global::批量导入程序重制版.Properties.Resources.登录__3_;
+            this.loginButton.Icon = global::批量导入程序重制版.Properties.Resources.BtnLogin;
             this.loginButton.IconRatio = 1F;
             this.loginButton.Location = new System.Drawing.Point(50, 340);
             this.loginButton.Name = "loginButton";

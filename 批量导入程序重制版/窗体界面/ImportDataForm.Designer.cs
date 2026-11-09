@@ -223,7 +223,7 @@ namespace 批量导入程序重制版
             this.queryDataButton.DefaultBack = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(145)))), ((int)(((byte)(112)))));
             this.queryDataButton.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.queryDataButton.ForeColor = System.Drawing.Color.White;
-            this.queryDataButton.Icon = global::批量导入程序重制版.Properties.Resources.查询;
+            this.queryDataButton.Icon = global::批量导入程序重制版.Properties.Resources.BtnSearch;
             this.queryDataButton.IconRatio = 0.9F;
             this.queryDataButton.Location = new System.Drawing.Point(623, 71);
             this.queryDataButton.Name = "queryDataButton";
@@ -239,7 +239,7 @@ namespace 批量导入程序重制版
             this.uploadButton.DefaultBack = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(145)))), ((int)(((byte)(112)))));
             this.uploadButton.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uploadButton.ForeColor = System.Drawing.Color.White;
-            this.uploadButton.Icon = global::批量导入程序重制版.Properties.Resources.上报;
+            this.uploadButton.Icon = global::批量导入程序重制版.Properties.Resources.BtnUpload;
             this.uploadButton.IconRatio = 0.9F;
             this.uploadButton.Location = new System.Drawing.Point(782, 71);
             this.uploadButton.Name = "uploadButton";

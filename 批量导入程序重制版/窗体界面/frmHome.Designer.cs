@@ -75,7 +75,7 @@ namespace 批量导入程序重制版
             // 
             this.homeIllustration.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.homeIllustration.BackColor = System.Drawing.Color.Transparent;
-            this.homeIllustration.BackgroundImage = global::批量导入程序重制版.Properties.Resources.homepage_analytics;
+            this.homeIllustration.BackgroundImage = global::批量导入程序重制版.Properties.Resources.HomeIllustration;
             this.homeIllustration.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.homeIllustration.Location = new System.Drawing.Point(198, 216);
             this.homeIllustration.Name = "homeIllustration";

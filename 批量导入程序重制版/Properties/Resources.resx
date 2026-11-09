@@ -117,71 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="功能菜单" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\功能菜单.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="NavToggleExpanded" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nav-toggle-expanded.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="登录" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\登录.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BtnLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn-login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="登录 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\登录 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="NavMenuTitle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nav-menu-title.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="菜单_导入" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\菜单_导入1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="NavLogout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nav-logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="菜单_导入1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\菜单_导入2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="NavFeature" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nav-feature.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="菜单_配置" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\菜单_配置.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="NavImport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nav-import.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menu-home" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu-home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="NavLog" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nav-log.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="登录 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\登录 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="NavSettings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nav-settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="用户退出" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\用户退出.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="NavHome" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nav-home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="html&amp;json" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\html&amp;json.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HomeIllustration" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home-illustration.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WEB" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WEB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BtnSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn-search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="上报" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\上报.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="上传 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\上传 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HTTPS连接" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HTTPS连接.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="登录 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\登录 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="查询" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\查询.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="菜单_功能" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\菜单_功能.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="菜单_日志" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\菜单_日志.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="功能菜单信息" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\功能菜单信息.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="homepage-analytics" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\homepage-analytics.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="菜单_导入2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\菜单_导入.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="导入" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\导入.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BtnUpload" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn-upload.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

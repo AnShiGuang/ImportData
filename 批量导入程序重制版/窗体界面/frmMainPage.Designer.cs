@@ -86,7 +86,7 @@ namespace 批量导入程序重制版
             this.sidebarToggleMenuButton.DefaultBack = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(145)))), ((int)(((byte)(112)))));
             this.sidebarToggleMenuButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.sidebarToggleMenuButton.ForeColor = System.Drawing.Color.White;
-            this.sidebarToggleMenuButton.Icon = global::批量导入程序重制版.Properties.Resources.登录__1_;
+            this.sidebarToggleMenuButton.Icon = global::批量导入程序重制版.Properties.Resources.NavToggleExpanded;
             this.sidebarToggleMenuButton.IconRatio = 0.8F;
             this.sidebarToggleMenuButton.Location = new System.Drawing.Point(0, 624);
             this.sidebarToggleMenuButton.Name = "sidebarToggleMenuButton";
@@ -103,7 +103,7 @@ namespace 批量导入程序重制版
             this.button1.DefaultBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(145)))), ((int)(((byte)(112)))));
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Icon = global::批量导入程序重制版.Properties.Resources.功能菜单信息;
+            this.button1.Icon = global::批量导入程序重制版.Properties.Resources.NavMenuTitle;
             this.button1.IconRatio = 0.9F;
             this.button1.Location = new System.Drawing.Point(0, 5);
             this.button1.Name = "button1";
@@ -120,7 +120,7 @@ namespace 批量导入程序重制版
             this.logoutButton.DefaultBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(145)))), ((int)(((byte)(112)))));
             this.logoutButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.logoutButton.ForeColor = System.Drawing.Color.White;
-            this.logoutButton.Icon = global::批量导入程序重制版.Properties.Resources.用户退出;
+            this.logoutButton.Icon = global::批量导入程序重制版.Properties.Resources.NavLogout;
             this.logoutButton.IconRatio = 0.8F;
             this.logoutButton.Location = new System.Drawing.Point(0, 269);
             this.logoutButton.Name = "logoutButton";
@@ -138,7 +138,7 @@ namespace 批量导入程序重制版
             this.configMenuButton.DefaultBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(145)))), ((int)(((byte)(112)))));
             this.configMenuButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.configMenuButton.ForeColor = System.Drawing.Color.White;
-            this.configMenuButton.Icon = global::批量导入程序重制版.Properties.Resources.菜单_配置;
+            this.configMenuButton.Icon = global::批量导入程序重制版.Properties.Resources.NavSettings;
             this.configMenuButton.IconRatio = 0.8F;
             this.configMenuButton.Location = new System.Drawing.Point(0, 225);
             this.configMenuButton.Name = "configMenuButton";
@@ -156,7 +156,7 @@ namespace 批量导入程序重制版
             this.functionPanelMenuButton.DefaultBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(145)))), ((int)(((byte)(112)))));
             this.functionPanelMenuButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.functionPanelMenuButton.ForeColor = System.Drawing.Color.White;
-            this.functionPanelMenuButton.Icon = global::批量导入程序重制版.Properties.Resources.菜单_功能;
+            this.functionPanelMenuButton.Icon = global::批量导入程序重制版.Properties.Resources.NavFeature;
             this.functionPanelMenuButton.IconRatio = 0.8F;
             this.functionPanelMenuButton.Location = new System.Drawing.Point(0, 181);
             this.functionPanelMenuButton.Name = "functionPanelMenuButton";
@@ -174,7 +174,7 @@ namespace 批量导入程序重制版
             this.uploadLogMenuButton.DefaultBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(145)))), ((int)(((byte)(112)))));
             this.uploadLogMenuButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uploadLogMenuButton.ForeColor = System.Drawing.Color.White;
-            this.uploadLogMenuButton.Icon = global::批量导入程序重制版.Properties.Resources.菜单_日志;
+            this.uploadLogMenuButton.Icon = global::批量导入程序重制版.Properties.Resources.NavLog;
             this.uploadLogMenuButton.IconRatio = 0.8F;
             this.uploadLogMenuButton.Location = new System.Drawing.Point(0, 137);
             this.uploadLogMenuButton.Name = "uploadLogMenuButton";
@@ -192,7 +192,7 @@ namespace 批量导入程序重制版
             this.importDataMenuButton.DefaultBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(145)))), ((int)(((byte)(112)))));
             this.importDataMenuButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.importDataMenuButton.ForeColor = System.Drawing.Color.White;
-            this.importDataMenuButton.Icon = global::批量导入程序重制版.Properties.Resources.导入;
+            this.importDataMenuButton.Icon = global::批量导入程序重制版.Properties.Resources.NavImport;
             this.importDataMenuButton.IconRatio = 0.8F;
             this.importDataMenuButton.Location = new System.Drawing.Point(0, 93);
             this.importDataMenuButton.Name = "importDataMenuButton";
@@ -210,7 +210,7 @@ namespace 批量导入程序重制版
             this.homeMenuButton.DefaultBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(145)))), ((int)(((byte)(112)))));
             this.homeMenuButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.homeMenuButton.ForeColor = System.Drawing.Color.White;
-            this.homeMenuButton.Icon = global::批量导入程序重制版.Properties.Resources.menu_home;
+            this.homeMenuButton.Icon = global::批量导入程序重制版.Properties.Resources.NavHome;
             this.homeMenuButton.IconRatio = 0.8F;
             this.homeMenuButton.Location = new System.Drawing.Point(0, 49);
             this.homeMenuButton.Name = "homeMenuButton";
