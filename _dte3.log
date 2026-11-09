@@ -1,0 +1,8 @@
+﻿PSVersion=5.1.26100.9711 CLR=4.0.30319.42000
+ROT-FAIL: RuntimeException :: 方法调用失败，因为 [System.Runtime.InteropServices.Marshal] 不包含名为“GetRunningObjectTable”的方法。
+BIND-FAIL !VisualStudio.DTE.18.0:29876 :: 使用“1”个参数调用“BindToMoniker”时发生异常:“Invalid syntax (异常来自 HRESULT:0x800401E4 (MK_E_SYNTAX))”
+BIND-FAIL !VisualStudio.DTE.18.0:18.0_1ad7b6e2:29876 :: 使用“1”个参数调用“BindToMoniker”时发生异常:“Invalid syntax (异常来自 HRESULT:0x800401E4 (MK_E_SYNTAX))”
+BIND-FAIL !VisualStudio.DTE.18.0:20212 :: 使用“1”个参数调用“BindToMoniker”时发生异常:“Invalid syntax (异常来自 HRESULT:0x800401E4 (MK_E_SYNTAX))”
+BIND-FAIL !VisualStudio.DTE.18.0:18.0_1ad7b6e2:20212 :: 使用“1”个参数调用“BindToMoniker”时发生异常:“Invalid syntax (异常来自 HRESULT:0x800401E4 (MK_E_SYNTAX))”
+BIND-FAIL !VisualStudio.DTE.18.0:30216 :: 使用“1”个参数调用“BindToMoniker”时发生异常:“Invalid syntax (异常来自 HRESULT:0x800401E4 (MK_E_SYNTAX))”
+BIND-FAIL !VisualStudio.DTE.18.0:18.0_1ad7b6e2:30216 :: 使用“1”个参数调用“BindToMoniker”时发生异常:“Invalid syntax (异常来自 HRESULT:0x800401E4 (MK_E_SYNTAX))”

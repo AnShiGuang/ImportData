@@ -105,7 +105,8 @@ namespace 批量导入程序重制版
             _importDataForm.ViewProgramLogRequested += importDataForm_ViewProgramLogRequested;
             _programLogForm = new ProgramLogForm(_logUserName);
             _programLogForm.FunctionPanelRequested += programLogForm_FunctionPanelRequested;
-            _functionPanelForm = new FunctionPanel();
+            _functionPanelForm = new FunctionPanel(isAdmin);
+            _functionPanelForm.LogoutRequested += functionPanel_LogoutRequested;
             _operationManualForm = new OperationManualForm();
             _configForm = new frmConfig(_logUserName);
             foreach (Form child in new Form[] { _homeForm, _importDataForm, _programLogForm, _functionPanelForm, _operationManualForm, _configForm })
@@ -258,6 +259,11 @@ namespace 批量导入程序重制版
         private void programLogForm_FunctionPanelRequested(object sender, EventArgs e)
         {
             ShowChild(_operationManualForm);
+        }
+
+        private void functionPanel_LogoutRequested(object sender, EventArgs e)
+        {
+            mainPage_LogoutButton_Click(sender, e);
         }
 
         private async void mainPage_LogoutButton_Click(object sender, EventArgs e)

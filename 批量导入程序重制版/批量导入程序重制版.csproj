@@ -51,6 +51,21 @@
     <Reference Include="BouncyCastle.Crypto">
       <HintPath>..\lib\BouncyCastle.Crypto.dll</HintPath>
       <Private>True</Private>
+    </Reference>    <Reference Include="SqlSugar">
+      <HintPath>..\lib\SqlSugar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\lib\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\lib\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess">
+      <HintPath>..\lib\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Extensions" />
   </ItemGroup>
@@ -66,6 +81,17 @@
     <Compile Include="核心\登录凭据.cs" />
     <Compile Include="核心\登录限制.cs" />
     <Compile Include="核心\批量导入上传服务.cs" />
+    <Compile Include="核心\SettingDemo.cs" />
+    <Compile Include="核心\SqlSugarRepository.cs" />
+    <Compile Include="核心\MD5Helper.cs" />
+    <Compile Include="核心\clsDataBase.cs" />
+    <Compile Include="核心\JieKou_PeiZhiXinXiBiao.cs" />
+    <Compile Include="核心\JiKou_JieGuoZhongJianBiao.cs" />
+    <Compile Include="核心\接口_配置信息表.cs" />
+    <Compile Include="核心\DBTableAndView.cs" />
+    <Compile Include="核心\ClassInfo.cs" />
+    <Compile Include="核心\CryptoHelper.cs" />
+    <Compile Include="核心\AppVersionLog.cs" />
     <Compile Include="窗体界面\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +133,17 @@
     </Compile>
     <Compile Include="窗体界面\OperationManualForm.Designer.cs">
       <DependentUpon>OperationManualForm.cs</DependentUpon>
+    </Compile>    <Compile Include="窗体界面\FormConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体界面\FormConfig.Designer.cs">
+      <DependentUpon>FormConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体界面\FormTips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体界面\FormTips.Designer.cs">
+      <DependentUpon>FormTips.cs</DependentUpon>
     </Compile>
     <Compile Include="窗体界面\frmConfig.cs">
       <SubType>Form</SubType>
