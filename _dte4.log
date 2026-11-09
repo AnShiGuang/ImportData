@@ -1,0 +1,15 @@
+﻿CAPTION: 
+SOLUTION: D:\体检管理系统5.0\PhysicalExamination5.WebApi.sln
+PROJECTS COUNT: 5
+PROJ name=[] unique=[] kind=[] file=[] saved=[] Object=NULL
+PROJ name=[] unique=[] kind=[] file=[] saved=[] Object=NULL
+PROJ name=[] unique=[] kind=[] file=[] saved=[] Object=NULL
+PROJ name=[] unique=[] kind=[] file=[] saved=[] Object=NULL
+PROJ name=[杂项文件] unique=[<MiscFiles>] kind=[{66A2671D-8FB5-11D2-AA7E-00C04F688DDE}] file=[] saved=[True] Object=NULL
+DOCUMENTS COUNT: 6
+DOC name=[卫宁.cs] containingProject=[]
+DOC name=[ExternalInterfaceMethod.cs] containingProject=[]
+DOC name=[SRenYuanDengJi.cs] containingProject=[]
+DOC name=[SGeRenFeiYongJieSuan.cs] containingProject=[]
+DOC name=[CallExternalInterface.cs] containingProject=[]
+DOC name=[环球his.cs] containingProject=[]
