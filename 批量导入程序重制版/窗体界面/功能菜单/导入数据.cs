@@ -1,12 +1,12 @@
 using System;
 using System.ComponentModel;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using 批量导入程序重制版.TiJian4;
 
 namespace 批量导入程序重制版
 {
@@ -224,36 +224,49 @@ namespace 批量导入程序重制版
 
             queryDataButton.Enabled = false;
             statusLabel.Text = "正在查询数据库...";
-            var start = hasDateRange ? startDate.Value.Date : DateTime.MinValue;
-            var endExclusive = hasDateRange ? endDate.Value.Date.AddDays(1) : DateTime.MaxValue;
-            await QueryPeopleAsync(hasDateRange, start, endExclusive, examNumber, personName, string.Empty);
+            await QueryPeopleAsync(examNumber, personName);
         }
 
-        private async Task QueryPeopleAsync(bool hasDateRange, DateTime startDate, DateTime endExclusive, string examNumber, string personName, string unitName)
+        private async Task QueryPeopleAsync(string examNumber, string personName)
         {
             try
             {
-                var people = await FindPeopleAsync(AppConfig.ConnectionString, hasDateRange, startDate, endExclusive,
-                    examNumber, personName, unitName);
+                statusLabel.Text = "正在按系统标识查询外接数据库...";
+                var configInfos = await LoadConfigInfosAsync();
+                var list = await new SelDataTable().loadPersonInfo(
+                    configInfos,
+                    selSystemId.Text,
+                    applicationInput.Text.Trim(),
+                    examInput.Text.Trim(),
+                    startDatePicker.Value,
+                    endDatePicker.Value);
                 if (IsDisposed) return;
-                currentPeople = people;
+                currentPeople = list.Select(t => new PersonRow(
+                    t.TiJianHao,
+                    t.Name,
+                    t.Gender,
+                    ParseAge(t.Age),
+                    string.Empty,
+                    t.DeptName,
+                    t.ShenQingDanShiJian ?? string.Empty,
+                    string.IsNullOrEmpty(t.Status) ? "待上传" : t.Status)).ToList();
                 synchronizingSelectAll = true;
                 selectAllCheckBox.Checked = false;
                 synchronizingSelectAll = false;
                 peopleGrid.Binding(new AntdUI.AntList<PersonRow>(currentPeople));
-                peopleGrid.Empty = people.Count == 0;
+                peopleGrid.Empty = currentPeople.Count == 0;
                 selectAllCheckBox.Visible = currentPeople.Count > 0;
-                resultCountLabel.Text = "查询到 " + people.Count + " 人";
+                resultCountLabel.Text = "查询到 " + currentPeople.Count + " 人";
                 LayoutSearchControls();
                 statusLabel.Text = "查询完成。";
                 await TryWriteAuditLogAsync(操作日志.Program, "常规", "查询人员",
-                    "查询完成，共找到 " + people.Count + " 人",
-                    "体检编号=" + (string.IsNullOrEmpty(examNumber) ? "未填写" : examNumber)
-                    + "；姓名=" + (string.IsNullOrEmpty(personName) ? "未填写" : personName)
+                    "查询完成，共找到 " + currentPeople.Count + " 人",
+                    "系统标识=" + selSystemId.Text
+                    + "；体检编号=" + (string.IsNullOrEmpty(examNumber) ? "未填写" : examNumber)
+                    + "；申请单号=" + (string.IsNullOrEmpty(personName) ? "未填写" : personName)
                     + "；开始日期=" + (startDatePicker.Value.HasValue ? startDatePicker.Value.Value.ToString("yyyy-MM-dd") : "未填写")
                     + "；结束日期=" + (endDatePicker.Value.HasValue ? endDatePicker.Value.Value.ToString("yyyy-MM-dd") : "未填写")
-                    + "；日期筛选=" + (hasDateRange ? "已应用" : "未应用")
-                    + "；返回人数=" + people.Count);
+                    + "；返回人数=" + currentPeople.Count);
             }
             catch (Exception ex)
             {
@@ -266,6 +279,30 @@ namespace 批量导入程序重制版
             {
                 if (!IsDisposed) queryDataButton.Enabled = true;
             }
+        }
+
+        /// <summary>
+        /// 读取已启用的系统标识配置（供外接数据查询使用）
+        /// </summary>
+        private async Task<List<接口_配置信息表>> LoadConfigInfosAsync()
+        {
+            try
+            {
+                var db = new DBTableAndView().InitSqlSugarClient();
+                return await db.Queryable<接口_配置信息表>()
+                    .Where(u => !string.IsNullOrEmpty(u.配置名称) && u.配置启用 == "是")
+                    .ToListAsync();
+            }
+            catch
+            {
+                return new List<接口_配置信息表>();
+            }
+        }
+
+        private static int ParseAge(string age)
+        {
+            int value;
+            return int.TryParse((age ?? string.Empty).Trim(), out value) ? value : 0;
         }
 
         private async void uploadButton_Click(object sender, EventArgs e)
@@ -288,7 +325,7 @@ namespace 批量导入程序重制版
             if (string.IsNullOrWhiteSpace(AppConfig.ConnectionString))
                 return "尚未配置数据库连接。";
 
-            await QueryPeopleAsync(false, DateTime.MinValue, DateTime.MaxValue, string.Empty, string.Empty, string.Empty);
+            await QueryPeopleAsync(string.Empty, string.Empty);
             if (IsDisposed) return string.Empty;
             if (currentPeople.Count == 0)
                 return "未查询到需要导入的人员。";
@@ -393,70 +430,6 @@ namespace 批量导入程序重制版
                 if (!IsDisposed)
                     MessageBox.Show(this, "操作未能写入数据库日志：" + ex.Message, "日志记录失败", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private static async Task<List<PersonRow>> FindPeopleAsync(string connectionString, bool hasDateRange, DateTime startDate, DateTime endExclusive, string examNumber, string personName, string unitName)
-        {
-            const string sql = @"
-WITH ExamDates AS
-(
-    SELECT [体检编号], MAX([总检日期]) AS [总检日期]
-    FROM [dbo].[总检_结果表]
-    WHERE (@hasDateRange = 0 OR ([总检日期] >= @startDate AND [总检日期] < @endExclusive))
-    GROUP BY [体检编号]
-)
-SELECT
-    e.[体检编号], r.[姓名], r.[性别], r.[年龄], r.[身份证号], u.[单位名称], e.[总检日期], r.[省平台上传状态]
-FROM ExamDates e
-INNER JOIN [dbo].[人员_体检登记表] r ON r.[体检编号] = e.[体检编号]
-LEFT JOIN [dbo].[基础数据_单位表] u ON u.[单位序号] = r.[单位序号]
-WHERE (@examNumber = N'' OR e.[体检编号] LIKE @examPattern ESCAPE N'~')
-  AND (@personName = N'' OR r.[姓名] LIKE @namePattern ESCAPE N'~')
-  AND (@unitName = N'' OR u.[单位名称] LIKE @unitPattern ESCAPE N'~')
-ORDER BY e.[总检日期] DESC, e.[体检编号]";
-            var people = new List<PersonRow>();
-            using (var connection = new SqlConnection(connectionString))
-            using (var command = new SqlCommand(sql, connection))
-            {
-                command.CommandTimeout = 20;
-                command.Parameters.Add("@hasDateRange", System.Data.SqlDbType.Bit).Value = hasDateRange;
-                command.Parameters.Add("@startDate", System.Data.SqlDbType.DateTime).Value = hasDateRange ? (object)startDate : DBNull.Value;
-                command.Parameters.Add("@endExclusive", System.Data.SqlDbType.DateTime).Value = hasDateRange ? (object)endExclusive : DBNull.Value;
-                command.Parameters.Add("@examNumber", System.Data.SqlDbType.NVarChar, 100).Value = examNumber;
-                command.Parameters.Add("@examPattern", System.Data.SqlDbType.NVarChar, 202).Value = "%" + EscapeLike(examNumber) + "%";
-                command.Parameters.Add("@personName", System.Data.SqlDbType.NVarChar, 100).Value = personName;
-                command.Parameters.Add("@namePattern", System.Data.SqlDbType.NVarChar, 202).Value = "%" + EscapeLike(personName) + "%";
-                command.Parameters.Add("@unitName", System.Data.SqlDbType.NVarChar, 200).Value = unitName;
-                command.Parameters.Add("@unitPattern", System.Data.SqlDbType.NVarChar, 402).Value = "%" + EscapeLike(unitName) + "%";
-                await connection.OpenAsync();
-                using (var reader = await command.ExecuteReaderAsync())
-                {
-                    while (await reader.ReadAsync())
-                    {
-                        var age = reader.IsDBNull(3) ? 0 : (int)Math.Round(Convert.ToDouble(reader.GetValue(3)));
-                        people.Add(new PersonRow(
-                            ReadText(reader, 0),
-                            ReadText(reader, 1),
-                            ReadText(reader, 2),
-                            age,
-                            ReadText(reader, 4),
-                            ReadText(reader, 5),
-                            reader.IsDBNull(6) ? string.Empty : Convert.ToDateTime(reader.GetValue(6)).ToString("yyyy-MM-dd"),
-                            ReadText(reader, 7).Length == 0 ? "待上传" : ReadText(reader, 7)));
-                    }
-                }
-            }
-            return people;
-        }
-
-        private static string ReadText(SqlDataReader reader, int ordinal)
-        {
-            return reader.IsDBNull(ordinal) ? string.Empty : Convert.ToString(reader.GetValue(ordinal)).Trim();
-        }
-
-        private static string EscapeLike(string value)
-        {
-            return (value ?? string.Empty).Replace("~", "~~").Replace("%", "~%").Replace("_", "~_").Replace("[", "~[");
         }
 
         protected override void OnFormClosed(FormClosedEventArgs e)

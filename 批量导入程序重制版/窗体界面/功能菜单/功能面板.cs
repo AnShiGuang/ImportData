@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace 批量导入程序重制版
@@ -23,6 +24,34 @@ namespace 批量导入程序重制版
         {
             InitializeComponent();
             SetAdminMode(isAdmin);
+            应用按钮样式();
+        }
+
+        /// <summary>
+        /// 统一功能面板按钮配色：白底 + 青绿描边 + 深青文字，避免与背景糊在一起、过亮。
+        /// </summary>
+        private void 应用按钮样式()
+        {
+            var 主色 = System.Drawing.Color.FromArgb(35, 145, 112);    // #239170 青绿
+            var 文字 = System.Drawing.Color.FromArgb(28, 110, 88);     // 深青文字
+            var 悬停 = System.Drawing.Color.FromArgb(233, 245, 240);   // 极浅青
+            var 按下 = System.Drawing.Color.FromArgb(215, 238, 231);
+
+            foreach (AntdUI.Button btn in panel1.Controls.OfType<AntdUI.Button>())
+            {
+                btn.IsLink = false;
+                btn.Radius = 6;
+                btn.BorderWidth = 1F;
+                btn.WaveSize = 0;
+                btn.DefaultBack = System.Drawing.Color.White;
+                btn.DefaultBorderColor = 主色;
+                btn.BackColor = System.Drawing.Color.White;
+                btn.BackHover = 悬停;
+                btn.BackActive = 按下;
+                btn.ForeColor = 文字;
+            }
+
+            panel1.BackColor = System.Drawing.Color.FromArgb(245, 247, 250);
         }
 
         private void SetAdminMode(bool isAdmin)
