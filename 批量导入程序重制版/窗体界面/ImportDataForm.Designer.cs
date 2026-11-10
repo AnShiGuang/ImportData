@@ -2,12 +2,10 @@ namespace 批量导入程序重制版
 {
     partial class ImportDataForm
     {
-        private System.Windows.Forms.Label systemLabel;
         private System.Windows.Forms.Label examLabel;
         private System.Windows.Forms.Label applicationLabel;
         private System.Windows.Forms.Label startDateLabel;
         private System.Windows.Forms.Label endDateLabel;
-        private AntdUI.Input systemSelect;
         private AntdUI.Input examInput;
         private AntdUI.Input applicationInput;
         private AntdUI.DatePicker startDatePicker;
@@ -31,14 +29,12 @@ namespace 批量导入程序重制版
             this.endDatePicker = new AntdUI.DatePicker();
             this.applicationLabel = new System.Windows.Forms.Label();
             this.examInput = new AntdUI.Input();
-            this.systemLabel = new System.Windows.Forms.Label();
             this.applicationInput = new AntdUI.Input();
             this.examLabel = new System.Windows.Forms.Label();
-            this.systemSelect = new AntdUI.Input();
             this.queryDataButton = new AntdUI.Button();
             this.uploadButton = new AntdUI.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.input1 = new AntdUI.Input();
+            this.selSystemId = new AntdUI.Select();
             this.label2 = new System.Windows.Forms.Label();
             this.peopleGrid.SuspendLayout();
             this.SuspendLayout();
@@ -167,16 +163,6 @@ namespace 批量导入程序重制版
             this.examInput.Size = new System.Drawing.Size(153, 34);
             this.examInput.TabIndex = 6;
             // 
-            // systemLabel
-            // 
-            this.systemLabel.AutoSize = true;
-            this.systemLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
-            this.systemLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.systemLabel.Location = new System.Drawing.Point(13, 11);
-            this.systemLabel.Name = "systemLabel";
-            this.systemLabel.Size = new System.Drawing.Size(56, 17);
-            this.systemLabel.TabIndex = 0;
-            this.systemLabel.Text = "当前院区";
             // 
             // applicationInput
             // 
@@ -203,18 +189,6 @@ namespace 批量导入程序重制版
             this.examLabel.TabIndex = 1;
             this.examLabel.Text = "体检编号";
             // 
-            // systemSelect
-            // 
-            this.systemSelect.BackColor = System.Drawing.Color.White;
-            this.systemSelect.BorderActive = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(157)))), ((int)(((byte)(143)))));
-            this.systemSelect.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(225)))), ((int)(((byte)(230)))));
-            this.systemSelect.BorderHover = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(157)))), ((int)(((byte)(143)))));
-            this.systemSelect.Location = new System.Drawing.Point(12, 31);
-            this.systemSelect.Name = "systemSelect";
-            this.systemSelect.PlaceholderText = "请选择当前院区";
-            this.systemSelect.Radius = 7;
-            this.systemSelect.Size = new System.Drawing.Size(143, 34);
-            this.systemSelect.TabIndex = 5;
             // 
             // queryDataButton
             // 
@@ -259,18 +233,18 @@ namespace 批量导入程序重制版
             this.label1.TabIndex = 13;
             this.label1.Text = "人员列表";
             // 
-            // input1
+            // selSystemId
             // 
-            this.input1.BackColor = System.Drawing.Color.White;
-            this.input1.BorderActive = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(157)))), ((int)(((byte)(143)))));
-            this.input1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(225)))), ((int)(((byte)(230)))));
-            this.input1.BorderHover = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(157)))), ((int)(((byte)(143)))));
-            this.input1.Location = new System.Drawing.Point(161, 31);
-            this.input1.Name = "input1";
-            this.input1.PlaceholderText = "请选择系统标识";
-            this.input1.Radius = 7;
-            this.input1.Size = new System.Drawing.Size(139, 34);
-            this.input1.TabIndex = 15;
+            this.selSystemId.BackColor = System.Drawing.Color.White;
+            this.selSystemId.BorderActive = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(157)))), ((int)(((byte)(143)))));
+            this.selSystemId.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(225)))), ((int)(((byte)(230)))));
+            this.selSystemId.BorderHover = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(157)))), ((int)(((byte)(143)))));
+            this.selSystemId.Location = new System.Drawing.Point(161, 31);
+            this.selSystemId.Name = "selSystemId";
+            this.selSystemId.PlaceholderText = "请选择系统标识";
+            this.selSystemId.Radius = 7;
+            this.selSystemId.Size = new System.Drawing.Size(139, 34);
+            this.selSystemId.TabIndex = 15;
             // 
             // label2
             // 
@@ -287,7 +261,7 @@ namespace 批量导入程序重制版
             // 
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(948, 678);
-            this.Controls.Add(this.input1);
+            this.Controls.Add(this.selSystemId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.startDateLabel);
@@ -300,11 +274,9 @@ namespace 批量导入程序重制版
             this.Controls.Add(this.queryDataButton);
             this.Controls.Add(this.examLabel);
             this.Controls.Add(this.uploadButton);
-            this.Controls.Add(this.systemSelect);
             this.Controls.Add(this.applicationLabel);
             this.Controls.Add(this.applicationInput);
             this.Controls.Add(this.examInput);
-            this.Controls.Add(this.systemLabel);
             this.Name = "ImportDataForm";
             this.Padding = new System.Windows.Forms.Padding(28);
             this.Text = "上传数据";
@@ -314,7 +286,7 @@ namespace 批量导入程序重制版
 
         }
         private System.Windows.Forms.Label label1;
-        private AntdUI.Input input1;
+        private AntdUI.Select selSystemId;
         private System.Windows.Forms.Label label2;
     }
 }

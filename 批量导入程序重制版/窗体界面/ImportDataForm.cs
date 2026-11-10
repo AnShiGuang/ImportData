@@ -26,6 +26,7 @@ namespace 批量导入程序重制版
             InitializeComponent();
             startDatePicker.Value = DateTime.Today;
             endDatePicker.Value = DateTime.Today;
+            LoadSystemIds();
             Resize += ImportDataForm_Resize;
             ConfigurePeopleGrid();
             LayoutSearchControls();
@@ -53,7 +54,7 @@ namespace 批量导入程序重制版
         {
             peopleGrid.Width = Math.Max(1, ClientSize.Width - 24);
 
-            // 顶部查询区按设计器比例排布：六个字段一行，两个按钮位于日期字段正下方。
+            // 顶部查询区按设计器比例排布：五个字段一行，两个按钮位于日期字段正下方。
             const int left = 12;
             const int rightMargin = 12;
             const int gap = 6;
@@ -63,19 +64,17 @@ namespace 批量导入程序重制版
             const int buttonY = 71;
             const int buttonHeight = 43;
 
-            var available = Math.Max(120, ClientSize.Width - left - rightMargin - gap * 5);
-            // 设计器中的字段宽度：当前院区 143、系统标识 139、申请单号 153、体检编号 153、开始日期 153、结束日期 153。
-            const int designTotal = 143 + 139 + 153 + 153 + 153 + 153;
-            var systemWidth = (int)Math.Round(available * 143d / designTotal);
+            var available = Math.Max(120, ClientSize.Width - left - rightMargin - gap * 4);
+            // 设计器中的字段宽度：系统标识 139、申请单号 153、体检编号 153、开始日期 153、结束日期 153。
+            const int designTotal = 139 + 153 + 153 + 153 + 153;
             var systemIdWidth = (int)Math.Round(available * 139d / designTotal);
             var applicationWidth = (int)Math.Round(available * 153d / designTotal);
             var examWidth = (int)Math.Round(available * 153d / designTotal);
             var startWidth = (int)Math.Round(available * 153d / designTotal);
-            var endWidth = available - systemWidth - systemIdWidth - applicationWidth - examWidth - startWidth;
+            var endWidth = available - systemIdWidth - applicationWidth - examWidth - startWidth;
 
             var x = left;
-            x = PlaceSearchField(systemLabel, systemSelect, x, systemWidth, labelY, inputY, inputHeight);
-            x = PlaceSearchField(label2, input1, x, systemIdWidth, labelY, inputY, inputHeight);
+            x = PlaceSearchField(label2, selSystemId, x, systemIdWidth, labelY, inputY, inputHeight);
             x = PlaceSearchField(applicationLabel, applicationInput, x, applicationWidth, labelY, inputY, inputHeight);
             x = PlaceSearchField(examLabel, examInput, x, examWidth, labelY, inputY, inputHeight);
             var startDateX = x;
@@ -91,6 +90,21 @@ namespace 批量导入程序重制版
             peopleGrid.Location = new Point(12, 120);
             peopleGrid.Height = Math.Max(120, ClientSize.Height - 153);
             PositionPeopleListHeading();
+        }
+
+        private void LoadSystemIds()
+        {
+            try
+            {
+                selSystemId.Items.Clear();
+                var ids = 标识Helper.获取院区标识列表(null);
+                selSystemId.Items.AddRange(ids.Cast<object>().ToArray());
+                if (selSystemId.Items.Count > 0) selSystemId.Text = ids[0];
+            }
+            catch
+            {
+                // 数据库不可用时保持空列表
+            }
         }
 
         private static int PlaceSearchField(Control label, Control input, int x, int width, int labelY, int inputY, int inputHeight)
@@ -174,7 +188,6 @@ namespace 批量导入程序重制版
             var hasEndDate = endDate.HasValue;
             var examNumber = examInput.Text.Trim();
             var personName = applicationInput.Text.Trim();
-            var unitName = systemSelect.Text.Trim();
             var ignoreDates = examNumber.Length > 0 || personName.Length > 0;
             if (!ignoreDates && hasStartDate != hasEndDate)
             {
@@ -187,7 +200,7 @@ namespace 批量导入程序重制版
             }
 
             var hasDateRange = !ignoreDates && hasStartDate && hasEndDate;
-            if (!hasDateRange && examNumber.Length == 0 && personName.Length == 0 && unitName.Length == 0)
+            if (!hasDateRange && examNumber.Length == 0 && personName.Length == 0)
             {
                 const string message = "请至少填写体检编号、人员姓名、单位名称，或选择完整的日期范围。";
                 await TryWriteAuditLogAsync(操作日志.Program, "警告", "查询条件为空", message, null);
@@ -207,7 +220,7 @@ namespace 批量导入程序重制版
             statusLabel.Text = "正在查询数据库...";
             var start = hasDateRange ? startDate.Value.Date : DateTime.MinValue;
             var endExclusive = hasDateRange ? endDate.Value.Date.AddDays(1) : DateTime.MaxValue;
-            QueryPeopleAsync(hasDateRange, start, endExclusive, examNumber, personName, unitName);
+            QueryPeopleAsync(hasDateRange, start, endExclusive, examNumber, personName, string.Empty);
         }
 
         private async void QueryPeopleAsync(bool hasDateRange, DateTime startDate, DateTime endExclusive, string examNumber, string personName, string unitName)
@@ -231,7 +244,6 @@ namespace 批量导入程序重制版
                     "查询完成，共找到 " + people.Count + " 人",
                     "体检编号=" + (string.IsNullOrEmpty(examNumber) ? "未填写" : examNumber)
                     + "；姓名=" + (string.IsNullOrEmpty(personName) ? "未填写" : personName)
-                    + "；单位名称=" + (string.IsNullOrEmpty(unitName) ? "未填写" : unitName)
                     + "；开始日期=" + (startDatePicker.Value.HasValue ? startDatePicker.Value.Value.ToString("yyyy-MM-dd") : "未填写")
                     + "；结束日期=" + (endDatePicker.Value.HasValue ? endDatePicker.Value.Value.ToString("yyyy-MM-dd") : "未填写")
                     + "；日期筛选=" + (hasDateRange ? "已应用" : "未应用")
