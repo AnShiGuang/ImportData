@@ -49,7 +49,6 @@ namespace 批量导入程序重制版
             this.pageHeader1.MaximizeBox = false;
             this.pageHeader1.MinimizeBox = false;
             this.pageHeader1.Name = "pageHeader1";
-            this.pageHeader1.ShowButton = true;
             this.pageHeader1.Size = new System.Drawing.Size(862, 40);
             this.pageHeader1.TabIndex = 0;
             this.pageHeader1.Text = " 功能面板：";
