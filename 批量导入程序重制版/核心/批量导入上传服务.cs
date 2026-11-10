@@ -103,7 +103,7 @@ namespace 批量导入程序重制版
                 && !string.IsNullOrWhiteSpace(AppConfig.BatchImportPrivateKey);
         }
 
-        internal static async Task<BatchImportUploadResult> UploadPersonAsync(ImportDataForm.PersonRow person)
+        internal static async Task<BatchImportUploadResult> UploadPersonAsync(导入数据窗体.PersonRow person)
         {
             if (person == null) throw new ArgumentNullException("person");
             Uri configuredRoot;
@@ -482,7 +482,7 @@ SELECT
             }
         }
 
-        private static Dictionary<string, object> BuildItem(ImportDataForm.PersonRow person, ExamSource source, string profileId)
+        private static Dictionary<string, object> BuildItem(导入数据窗体.PersonRow person, ExamSource source, string profileId)
         {
             var item = new Dictionary<string, object>(StringComparer.Ordinal)
             {

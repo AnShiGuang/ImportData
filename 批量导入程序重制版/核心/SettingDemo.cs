@@ -32,6 +32,18 @@ namespace 批量导入程序重制版
         public string ExamVerText { get; set; } = string.Empty;
         public string WinVer { get; set; } = string.Empty;
         public DateTime LastRunTime { get; set; } = DateTime.Now;
+        /// <summary>
+        /// 本程序的本地院区（在“配置参数”界面设置）
+        /// </summary>
+        public string LocalCampus { get; set; } = string.Empty;
+        /// <summary>
+        /// 条件勾选：要勾选的项目（“|”分隔）
+        /// </summary>
+        public string ConditionProjects { get; set; } = string.Empty;
+        /// <summary>
+        /// 条件勾选：要勾选的单位名
+        /// </summary>
+        public string ConditionUnit { get; set; } = string.Empty;
     }
 
     public static class SettingHelper
@@ -108,7 +120,10 @@ namespace 批量导入程序重制版
                     SavedPwd = config.SavedPwd,
                     ExamVerText = config.ExamVerText,
                     WinVer = config.WinVer,
-                    LastRunTime = config.LastRunTime
+                    LastRunTime = config.LastRunTime,
+                    LocalCampus = config.LocalCampus,
+                    ConditionProjects = config.ConditionProjects,
+                    ConditionUnit = config.ConditionUnit
                 };
 
                 var jsonSettings = new JsonSerializerSettings

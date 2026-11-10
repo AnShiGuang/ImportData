@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -68,6 +68,14 @@
       <HintPath>..\lib\Oracle.ManagedDataAccess.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Spire.Pdf">
+      <HintPath>..\lib\Spire.Pdf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.License">
+      <HintPath>..\lib\Spire.License.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.Extensions" />
   </ItemGroup>
   <ItemGroup>
@@ -93,74 +101,128 @@
     <Compile Include="核心\ClassInfo.cs" />
     <Compile Include="核心\CryptoHelper.cs" />
     <Compile Include="核心\AppVersionLog.cs" />
-    <Compile Include="窗体界面\frmLogin.cs">
+    <Compile Include="核心\jcsj_YuanQu.cs" />
+    <Compile Include="核心\院区Helper.cs" />
+    <Compile Include="核心\标识Helper.cs" />
+    <Compile Include="核心\jcsj_KeShi.cs" />
+    <Compile Include="核心\ry_TiJianDengJi.cs" />
+    <Compile Include="核心\ry_ShenQingDanMingXi.cs" />
+    <Compile Include="核心\ry_ShenQingDanZhu.cs" />
+    <Compile Include="核心\SelDataTable.cs" />
+    <Compile Include="核心\接苯放射Helper.cs" />
+    <Compile Include="核心\项目对应Helper.cs" />
+    <Compile Include="核心\条件勾选Helper.cs" />
+    <Compile Include="核心\图片处理.cs" />
+    <Compile Include="窗体界面\程序架构\登录窗体.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="窗体界面\frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <Compile Include="窗体界面\程序架构\登录窗体.Designer.cs">
+      <DependentUpon>登录窗体.cs</DependentUpon>
     </Compile>
-    <Compile Include="窗体界面\frmMainPage.cs">
+    <Compile Include="窗体界面\程序架构\主窗体.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="窗体界面\frmMainPage.Designer.cs">
-      <DependentUpon>frmMainPage.cs</DependentUpon>
+    <Compile Include="窗体界面\程序架构\主窗体.Designer.cs">
+      <DependentUpon>主窗体.cs</DependentUpon>
     </Compile>
-    <Compile Include="窗体界面\frmHome.cs">
+    <Compile Include="窗体界面\程序架构\主页窗体.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="窗体界面\frmHome.Designer.cs">
-      <DependentUpon>frmHome.cs</DependentUpon>
+    <Compile Include="窗体界面\程序架构\主页窗体.Designer.cs">
+      <DependentUpon>主页窗体.cs</DependentUpon>
     </Compile>
-    <Compile Include="窗体界面\ImportDataForm.cs">
+    <Compile Include="窗体界面\功能展示\导入数据窗体.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="窗体界面\ImportDataForm.Designer.cs">
-      <DependentUpon>ImportDataForm.cs</DependentUpon>
+    <Compile Include="窗体界面\功能展示\导入数据窗体.Designer.cs">
+      <DependentUpon>导入数据窗体.cs</DependentUpon>
     </Compile>
-    <Compile Include="窗体界面\ProgramLogForm.cs">
+    <Compile Include="窗体界面\功能展示\程序日志窗体.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="窗体界面\ProgramLogForm.Designer.cs">
-      <DependentUpon>ProgramLogForm.cs</DependentUpon>
+    <Compile Include="窗体界面\功能展示\程序日志窗体.Designer.cs">
+      <DependentUpon>程序日志窗体.cs</DependentUpon>
     </Compile>
-    <Compile Include="窗体界面\FunctionPanel.cs">
+    <Compile Include="窗体界面\功能展示\功能面板窗体.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="窗体界面\FunctionPanel.Designer.cs">
-      <DependentUpon>FunctionPanel.cs</DependentUpon>
+    <Compile Include="窗体界面\功能展示\功能面板窗体.Designer.cs">
+      <DependentUpon>功能面板窗体.cs</DependentUpon>
     </Compile>
-    <Compile Include="窗体界面\OperationManualForm.cs">
+    <Compile Include="窗体界面\功能展示\操作手册窗体.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="窗体界面\OperationManualForm.Designer.cs">
-      <DependentUpon>OperationManualForm.cs</DependentUpon>
+    <Compile Include="窗体界面\功能展示\操作手册窗体.Designer.cs">
+      <DependentUpon>操作手册窗体.cs</DependentUpon>
     </Compile>
-    <Compile Include="窗体界面\FormConfig.cs">
+    <Compile Include="窗体界面\功能展示\标识配置窗体.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="窗体界面\FormConfig.Designer.cs">
-      <DependentUpon>FormConfig.cs</DependentUpon>
+    <Compile Include="窗体界面\功能展示\标识配置窗体.Designer.cs">
+      <DependentUpon>标识配置窗体.cs</DependentUpon>
     </Compile>
-    <Compile Include="窗体界面\FormTips.cs">
+    <Compile Include="窗体界面\功能展示\提示窗体.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="窗体界面\FormTips.Designer.cs">
-      <DependentUpon>FormTips.cs</DependentUpon>
+    <Compile Include="窗体界面\功能展示\提示窗体.Designer.cs">
+      <DependentUpon>提示窗体.cs</DependentUpon>
     </Compile>
-    <Compile Include="窗体界面\frmConfig.cs">
+    <Compile Include="窗体界面\程序架构\配置窗体.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="窗体界面\frmConfig.Designer.cs">
-      <DependentUpon>frmConfig.cs</DependentUpon>
+    <Compile Include="窗体界面\程序架构\配置窗体.Designer.cs">
+      <DependentUpon>配置窗体.cs</DependentUpon>
     </Compile>
-    <Compile Include="窗体界面\frmDatabaseConfig.cs">
+    <Compile Include="窗体界面\程序架构\数据库配置窗体.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="窗体界面\frmDatabaseConfig.Designer.cs">
-      <DependentUpon>frmDatabaseConfig.cs</DependentUpon>
+    <Compile Include="窗体界面\程序架构\数据库配置窗体.Designer.cs">
+      <DependentUpon>数据库配置窗体.cs</DependentUpon>
     </Compile>
-    <Compile Include="窗体界面\PageFormBase.cs">
+    <Compile Include="窗体界面\程序架构\页面基类.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体界面\功能展示\科室选择窗体.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体界面\功能展示\科室选择窗体.Designer.cs">
+      <DependentUpon>科室选择窗体.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体界面\功能展示\数据查询窗体.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体界面\功能展示\数据查询窗体.Designer.cs">
+      <DependentUpon>数据查询窗体.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体界面\功能展示\自动导入窗体.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体界面\功能展示\自动导入窗体.Designer.cs">
+      <DependentUpon>自动导入窗体.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体界面\功能展示\接苯放射设置窗体.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体界面\功能展示\接苯放射设置窗体.Designer.cs">
+      <DependentUpon>接苯放射设置窗体.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体界面\功能展示\项目对应窗体.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体界面\功能展示\项目对应窗体.Designer.cs">
+      <DependentUpon>项目对应窗体.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体界面\功能展示\错误项目窗体.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体界面\功能展示\错误项目窗体.Designer.cs">
+      <DependentUpon>错误项目窗体.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体界面\功能展示\条件勾选窗体.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体界面\功能展示\条件勾选窗体.Designer.cs">
+      <DependentUpon>条件勾选窗体.cs</DependentUpon>
     </Compile>
     <None Include="App.config" />
     <None Include="packages.config" />
@@ -201,32 +263,32 @@
     <EmbeddedResource Include="Resources\config-admin-required.png">
       <LogicalName>批量导入程序重制版.Resources.config-admin-required.png</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="窗体界面\frmConfig.resx">
-      <DependentUpon>frmConfig.cs</DependentUpon>
+    <EmbeddedResource Include="窗体界面\程序架构\配置窗体.resx">
+      <DependentUpon>配置窗体.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="窗体界面\frmDatabaseConfig.resx">
-      <DependentUpon>frmDatabaseConfig.cs</DependentUpon>
+    <EmbeddedResource Include="窗体界面\程序架构\数据库配置窗体.resx">
+      <DependentUpon>数据库配置窗体.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="窗体界面\FunctionPanel.resx">
-      <DependentUpon>FunctionPanel.cs</DependentUpon>
+    <EmbeddedResource Include="窗体界面\功能展示\功能面板窗体.resx">
+      <DependentUpon>功能面板窗体.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="窗体界面\ImportDataForm.resx">
-      <DependentUpon>ImportDataForm.cs</DependentUpon>
+    <EmbeddedResource Include="窗体界面\功能展示\导入数据窗体.resx">
+      <DependentUpon>导入数据窗体.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="窗体界面\frmHome.resx">
-      <DependentUpon>frmHome.cs</DependentUpon>
+    <EmbeddedResource Include="窗体界面\程序架构\主页窗体.resx">
+      <DependentUpon>主页窗体.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="窗体界面\frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="窗体界面\程序架构\登录窗体.resx">
+      <DependentUpon>登录窗体.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="窗体界面\frmMainPage.resx">
-      <DependentUpon>frmMainPage.cs</DependentUpon>
+    <EmbeddedResource Include="窗体界面\程序架构\主窗体.resx">
+      <DependentUpon>主窗体.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="窗体界面\PageFormBase.resx">
-      <DependentUpon>PageFormBase.cs</DependentUpon>
+    <EmbeddedResource Include="窗体界面\程序架构\页面基类.resx">
+      <DependentUpon>页面基类.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="窗体界面\ProgramLogForm.resx">
-      <DependentUpon>ProgramLogForm.cs</DependentUpon>
+    <EmbeddedResource Include="窗体界面\功能展示\程序日志窗体.resx">
+      <DependentUpon>程序日志窗体.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
