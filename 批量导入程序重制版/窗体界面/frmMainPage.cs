@@ -107,6 +107,12 @@ namespace 批量导入程序重制版
             _programLogForm.FunctionPanelRequested += programLogForm_FunctionPanelRequested;
             _functionPanelForm = new FunctionPanel(isAdmin);
             _functionPanelForm.LogoutRequested += functionPanel_LogoutRequested;
+            _functionPanelForm.LogQueryRequested += functionPanel_LogQueryRequested;
+            _functionPanelForm.GlobalConfigRequested += functionPanel_GlobalConfigRequested;
+            _functionPanelForm.ResetConfigRequested += functionPanel_ResetConfigRequested;
+            _functionPanelForm.AutostartRequested += functionPanel_AutostartRequested;
+            _functionPanelForm.DbQueryRequested += functionPanel_DbQueryRequested;
+            _functionPanelForm.RawQueryRequested += functionPanel_RawQueryRequested;
             _operationManualForm = new OperationManualForm();
             _configForm = new frmConfig(_logUserName);
             foreach (Form child in new Form[] { _homeForm, _importDataForm, _programLogForm, _functionPanelForm, _operationManualForm, _configForm })
@@ -264,6 +270,88 @@ namespace 批量导入程序重制版
         private void functionPanel_LogoutRequested(object sender, EventArgs e)
         {
             mainPage_LogoutButton_Click(sender, e);
+        }
+
+        private void functionPanel_LogQueryRequested(object sender, EventArgs e)
+        {
+            _programLogForm.SelectUploadLogs();
+            ShowChild(_programLogForm);
+        }
+
+        private void functionPanel_GlobalConfigRequested(object sender, EventArgs e)
+        {
+            mainPage_ConfigMenuButton_Click(sender, e);
+        }
+
+        private async void functionPanel_ResetConfigRequested(object sender, EventArgs e)
+        {
+            var confirmation = MessageBox.Show(this,
+                "确定要恢复默认配置吗？这将清除本地院区、接口参数、登录凭据等本机设置（数据库中的标识配置不受影响）。",
+                "恢复默认配置", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (confirmation != DialogResult.Yes) return;
+
+            try
+            {
+                SettingHelper.SaveConfig(new AppSettings());
+                AppConfig.SetBatchImportUserCode("");
+                await 操作日志.WriteAsync(操作日志.Program, "常规", _logUserName, 登录限制.GetClientIp(),
+                    "恢复默认配置", "已恢复默认配置", "清除了本地院区、接口参数与登录凭据");
+                MessageBox.Show(this, "已恢复默认配置，请重新设置本地院区与接口参数。", "恢复默认配置",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "恢复默认配置失败：" + ex.Message, "恢复默认配置",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void functionPanel_AutostartRequested(object sender, EventArgs e)
+        {
+            const string runKeyPath = @"Software\Microsoft\Windows\CurrentVersion\Run";
+            const string appName = "批量导入程序重制版";
+            try
+            {
+                using (var key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(runKeyPath, true))
+                {
+                    if (key == null)
+                    {
+                        MessageBox.Show(this, "无法打开注册表启动项。", "开机启动", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    if (key.GetValue(appName) != null)
+                    {
+                        key.DeleteValue(appName);
+                        MessageBox.Show(this, "已取消开机自动启动。", "开机启动", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        key.SetValue(appName, "\"" + Application.ExecutablePath + "\"");
+                        MessageBox.Show(this, "已设置开机自动启动。", "开机启动", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "设置开机启动失败：" + ex.Message, "开机启动", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void functionPanel_DbQueryRequested(object sender, EventArgs e)
+        {
+            using (var form = new SqlQueryForm())
+            {
+                form.ShowDialog(this);
+            }
+        }
+
+        private void functionPanel_RawQueryRequested(object sender, EventArgs e)
+        {
+            using (var form = new SqlQueryForm { RawDataMode = true })
+            {
+                form.ShowDialog(this);
+            }
         }
 
         private async void mainPage_LogoutButton_Click(object sender, EventArgs e)
