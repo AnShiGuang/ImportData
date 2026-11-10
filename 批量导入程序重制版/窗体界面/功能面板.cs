@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace 批量导入程序重制版
 {
-    public sealed partial class 功能面板窗体 : 页面基类
+    public sealed partial class 功能面板 : 页面基类
     {
         public event EventHandler LogoutRequested;
         public event EventHandler LogQueryRequested;
@@ -17,9 +17,9 @@ namespace 批量导入程序重制版
         public event EventHandler 条件勾选Requested;
         public event EventHandler 项目对应Requested;
 
-        public 功能面板窗体() : this(true) { }
+        public 功能面板() : this(true) { }
 
-        public 功能面板窗体(bool isAdmin)
+        public 功能面板(bool isAdmin)
         {
             InitializeComponent();
             SetAdminMode(isAdmin);
@@ -80,22 +80,22 @@ namespace 批量导入程序重制版
 
         private void btnCreateConfig_Click(object sender, EventArgs e)
         {
-            new 标识配置窗体().ShowDialog(this);
+            new 标识配置参数().ShowDialog(this);
         }
 
         private void btnUpdateConfig_Click(object sender, EventArgs e)
         {
-            new 标识配置窗体("Update").ShowDialog(this);
+            new 标识配置参数("Update").ShowDialog(this);
         }
 
         private void btnDeleteConfig_Click(object sender, EventArgs e)
         {
-            new 标识配置窗体("Delete").ShowDialog(this);
+            new 标识配置参数("Delete").ShowDialog(this);
         }
 
         private void btnEnabledConfig_Click(object sender, EventArgs e)
         {
-            new 标识配置窗体("Enabled").ShowDialog(this);
+            new 标识配置参数("Enabled").ShowDialog(this);
         }
 
         private void btnUserOut_Click(object sender, EventArgs e)

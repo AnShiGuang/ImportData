@@ -1,6 +1,6 @@
 namespace 批量导入程序重制版
 {
-    partial class 接苯放射设置窗体
+    partial class 接苯设置窗体
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -186,7 +186,7 @@ namespace 批量导入程序重制版
             this.cmd退出.Text = "退出(&E)";
             this.cmd退出.Click += new System.EventHandler(this.cmd退出_Click);
             //
-            // 接苯放射设置窗体
+            // 接苯设置窗体
             //
             this.ClientSize = new System.Drawing.Size(504, 246);
             this.Controls.Add(this.label1);
@@ -198,7 +198,7 @@ namespace 批量导入程序重制版
             this.Controls.Add(this.cmd存盘);
             this.Controls.Add(this.btn删除配置);
             this.Controls.Add(this.cmd退出);
-            this.Name = "接苯放射设置窗体";
+            this.Name = "接苯设置窗体";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "接苯放射设置";
             this.Load += new System.EventHandler(this.Form接苯放射设置_Load);

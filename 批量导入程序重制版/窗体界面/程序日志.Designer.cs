@@ -1,6 +1,6 @@
 namespace 批量导入程序重制版
 {
-    partial class 程序日志窗体
+    partial class 程序日志
     {
         private AntdUI.Label titleLabel;
         private AntdUI.Label descriptionLabel;
@@ -129,7 +129,7 @@ namespace 批量导入程序重制版
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "操作日志";
             // 
-            // 程序日志窗体
+            // 程序日志
             // 
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(918, 680);
@@ -142,7 +142,7 @@ namespace 批量导入程序重制版
             this.Controls.Add(this.allLogsRadio);
             this.Controls.Add(this.descriptionLabel);
             this.Controls.Add(this.titleLabel);
-            this.Name = "程序日志窗体";
+            this.Name = "程序日志";
             this.Padding = new System.Windows.Forms.Padding(28);
             this.Text = "操作日志";
             this.ResumeLayout(false);

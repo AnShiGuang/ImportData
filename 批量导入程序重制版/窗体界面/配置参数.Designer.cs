@@ -1,6 +1,6 @@
 namespace 批量导入程序重制版
 {
-    partial class 配置窗体
+    partial class 配置参数
     {
         private AntdUI.Label configTitleLabel;
         private AntdUI.Label configDescriptionLabel;
@@ -53,7 +53,7 @@ namespace 批量导入程序重制版
             this.uploadSectionPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // 配置窗体
+            // 配置参数
             // 
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;

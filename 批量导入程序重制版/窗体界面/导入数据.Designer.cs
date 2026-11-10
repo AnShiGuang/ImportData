@@ -1,6 +1,6 @@
 namespace 批量导入程序重制版
 {
-    partial class 导入数据窗体
+    partial class 导入数据
     {
         private System.Windows.Forms.Label examLabel;
         private System.Windows.Forms.Label applicationLabel;
@@ -259,7 +259,7 @@ namespace 批量导入程序重制版
             this.label2.TabIndex = 14;
             this.label2.Text = "系统标识";
             // 
-            // 导入数据窗体
+            // 导入数据
             // 
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(948, 678);
@@ -279,7 +279,7 @@ namespace 批量导入程序重制版
             this.Controls.Add(this.applicationLabel);
             this.Controls.Add(this.applicationInput);
             this.Controls.Add(this.examInput);
-            this.Name = "导入数据窗体";
+            this.Name = "导入数据";
             this.Padding = new System.Windows.Forms.Padding(28);
             this.Text = "上传数据";
             this.peopleGrid.ResumeLayout(false);

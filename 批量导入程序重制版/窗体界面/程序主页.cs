@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace 批量导入程序重制版
 {
-    public sealed partial class 主窗体 : AntdUI.Window
+    public sealed partial class 程序主页 : AntdUI.Window
     {
         private readonly string _userName;
         private readonly string _logUserName;
@@ -61,11 +61,11 @@ namespace 批量导入程序重制版
         private Padding _logoutButtonPadding;
         private int _sidebarCollapseDelayTicks;
         private 主页窗体 _homeForm;
-        private 导入数据窗体 _importDataForm;
-        private 程序日志窗体 _programLogForm;
-        private 功能面板窗体 _functionPanelForm;
+        private 导入数据 _importDataForm;
+        private 程序日志 _programLogForm;
+        private 功能面板 _functionPanelForm;
         private 操作手册窗体 _operationManualForm;
-        private 配置窗体 _configForm;
+        private 配置参数 _configForm;
         private Panel _configPermissionPromptPanel;
         private FlowLayoutPanel _configPermissionPromptContent;
         private PictureBox _configPermissionPicture;
@@ -79,9 +79,9 @@ namespace 批量导入程序重制版
         private AntdUI.Button configNavButton => configMenuButton;
         private AntdUI.Button toggleSidebarButton => sidebarToggleMenuButton;
 
-        public 主窗体(string userName) : this(userName, userName) { }
+        public 程序主页(string userName) : this(userName, userName) { }
 
-        public 主窗体(string userName, string displayName)
+        public 程序主页(string userName, string displayName)
         {
             _userName = userName;
             _logUserName = 操作日志.FormatUserName(userName, displayName);
@@ -101,11 +101,11 @@ namespace 批量导入程序重制版
         private void CreateChildForms(string displayName, bool isAdmin)
         {
             _homeForm = new 主页窗体(displayName, isAdmin);
-            _importDataForm = new 导入数据窗体(_logUserName);
+            _importDataForm = new 导入数据(_logUserName);
             _importDataForm.ViewProgramLogRequested += importDataForm_ViewProgramLogRequested;
-            _programLogForm = new 程序日志窗体(_logUserName);
+            _programLogForm = new 程序日志(_logUserName);
             _programLogForm.FunctionPanelRequested += programLogForm_FunctionPanelRequested;
-            _functionPanelForm = new 功能面板窗体(isAdmin);
+            _functionPanelForm = new 功能面板(isAdmin);
             _functionPanelForm.LogoutRequested += functionPanel_LogoutRequested;
             _functionPanelForm.LogQueryRequested += functionPanel_LogQueryRequested;
             _functionPanelForm.GlobalConfigRequested += functionPanel_GlobalConfigRequested;
@@ -118,7 +118,7 @@ namespace 批量导入程序重制版
             _functionPanelForm.条件勾选Requested += functionPanel_条件勾选Requested;
             _functionPanelForm.项目对应Requested += functionPanel_项目对应Requested;
             _operationManualForm = new 操作手册窗体();
-            _configForm = new 配置窗体(_logUserName);
+            _configForm = new 配置参数(_logUserName);
             foreach (Form child in new Form[] { _homeForm, _importDataForm, _programLogForm, _functionPanelForm, _operationManualForm, _configForm })
             {
                 child.TopLevel = false;
@@ -358,11 +358,6 @@ namespace 批量导入程序重制版
             }
         }
 
-        private void importDataForm_FunctionPanelRequested(object sender, EventArgs e)
-        {
-            ShowChild(_functionPanelForm);
-        }
-
         private async void functionPanel_AutoImportRequested(object sender, EventArgs e)
         {
             var form = new 自动导入窗体(_logUserName);
@@ -388,7 +383,7 @@ namespace 批量导入程序重制版
 
         private void functionPanel_接苯放射Requested(object sender, EventArgs e)
         {
-            using (var form = new 接苯放射设置窗体())
+            using (var form = new 接苯设置窗体())
             {
                 form.ShowDialog(this);
             }
@@ -510,7 +505,7 @@ namespace 批量导入程序重制版
         private static Image LoadMenuIcon(string iconName)
         {
             var resourceName = "批量导入程序重制版.Resources." + iconName;
-            using (var stream = typeof(主窗体).Assembly.GetManifestResourceStream(resourceName))
+            using (var stream = typeof(程序主页).Assembly.GetManifestResourceStream(resourceName))
             {
                 if (stream == null) return null;
                 using (var source = Image.FromStream(stream)) return new Bitmap(source);

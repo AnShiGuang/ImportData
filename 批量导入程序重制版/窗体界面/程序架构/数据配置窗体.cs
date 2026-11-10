@@ -6,13 +6,13 @@ using System.Windows.Forms;
 
 namespace 批量导入程序重制版
 {
-    internal sealed partial class 数据库配置窗体 : Form
+    internal sealed partial class 数据配置窗体 : Form
     {
         private bool builderMode;
         private bool operationInProgress;
         private bool suppressPreviewUpdate;
 
-        internal 数据库配置窗体()
+        internal 数据配置窗体()
         {
             InitializeComponent();
             // 设计时只按设计器序列化的布局展示，不读取本机配置、不调整窗体尺寸

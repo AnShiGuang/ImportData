@@ -1,6 +1,6 @@
 namespace 批量导入程序重制版
 {
-    partial class 标识配置窗体
+    partial class 标识配置参数
     {
         /// <summary>
         /// Required designer variable.
@@ -856,7 +856,7 @@ namespace 批量导入程序重制版
             this.lblTipsDY.Text = "对应要求";
             this.lblTipsDY.Click += new System.EventHandler(this.lblTipsDY_Click);
             // 
-            // 标识配置窗体
+            // 标识配置参数
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -871,9 +871,9 @@ namespace 批量导入程序重制版
             this.Controls.Add(this.lblTips);
             this.Controls.Add(this.selConfigName);
             this.Controls.Add(this.pageHeader1);
-            this.Name = "标识配置窗体";
+            this.Name = "标识配置参数";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "标识配置窗体";
+            this.Text = "标识配置参数";
             this.Load += new System.EventHandler(this.FormConfig_Load);
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);

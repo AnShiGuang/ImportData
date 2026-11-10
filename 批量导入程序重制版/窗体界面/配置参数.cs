@@ -4,13 +4,13 @@ using System.Windows.Forms;
 
 namespace 批量导入程序重制版
 {
-    public sealed partial class 配置窗体 : 页面基类
+    public sealed partial class 配置参数 : 页面基类
     {
         private readonly string userName;
         private string savedUploadBaseUrl;
-        public 配置窗体() : this(string.Empty) { }
+        public 配置参数() : this(string.Empty) { }
 
-        public 配置窗体(string userName)
+        public 配置参数(string userName)
         {
             this.userName = userName;
             InitializeComponent();

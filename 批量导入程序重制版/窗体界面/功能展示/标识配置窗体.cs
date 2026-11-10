@@ -14,7 +14,7 @@ using 批量导入程序重制版.TiJian4;
 
 namespace 批量导入程序重制版
 {
-    public partial class 标识配置窗体 : Window
+    public partial class 标识配置参数 : Window
     {
         private SqlSugarClient _db;
         private AppSettings m_settings;
@@ -22,7 +22,7 @@ namespace 批量导入程序重制版
         List<接口_配置信息表> _configInfos;
         BindingList<LocalSetting> listLocalSetting = new BindingList<LocalSetting>();
         string m_strPeiZhiXuHao;
-        public 标识配置窗体()
+        public 标识配置参数()
         {
             InitializeComponent();
         }
@@ -31,7 +31,7 @@ namespace 批量导入程序重制版
             this.Hide();
             base.OnFormClosing(e);
         }
-        public 标识配置窗体(string strCaoZuo)
+        public 标识配置参数(string strCaoZuo)
         {
             InitializeComponent();
             m_CaoZuo = strCaoZuo;

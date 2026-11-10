@@ -1,6 +1,6 @@
 namespace 批量导入程序重制版
 {
-    partial class 主窗体
+    partial class 程序主页
     {
         private System.ComponentModel.IContainer components = null;
         private System.Windows.Forms.Panel sidebarPanel;
@@ -278,7 +278,7 @@ namespace 批量导入程序重制版
             this.windowBar.Size = new System.Drawing.Size(1180, 32);
             this.windowBar.TabIndex = 1;
             // 
-            // 主窗体
+            // 程序主页
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -287,7 +287,7 @@ namespace 批量导入程序重制版
             this.Controls.Add(this.workspacePanel);
             this.Controls.Add(this.windowBar);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
-            this.Name = "主窗体";
+            this.Name = "程序主页";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "批量导入程序重制版";
             this.sidebarPanel.ResumeLayout(false);

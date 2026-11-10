@@ -282,7 +282,7 @@ namespace 批量导入程序重制版
             {
                 messageLabel.ForeColor = System.Drawing.Color.Firebrick;
                 messageLabel.Text = "尚未配置数据库连接。";
-                using (var dialog = new 数据库配置窗体())
+                using (var dialog = new 数据配置窗体())
                 {
                     if (dialog.ShowDialog(this) == DialogResult.OK)
                     {
@@ -358,7 +358,7 @@ namespace 批量导入程序重制版
                     操作日志.FormatUserName(user, displayName));
                 userInput.SuffixText = string.Equals(user, AppConfig.Get("SuperUser", "muyang"), StringComparison.OrdinalIgnoreCase) ? "管理员" : string.Empty;
                 Hide();
-                using (var form = new 主窗体(user, displayName))
+                using (var form = new 程序主页(user, displayName))
                 {
                     form.ShowDialog(this);
                     if (form.LoggedOut)
@@ -405,7 +405,7 @@ namespace 批量导入程序重制版
                 "数据库连接失败", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
             if (answer != DialogResult.Yes) return;
 
-            using (var dialog = new 数据库配置窗体())
+            using (var dialog = new 数据配置窗体())
             {
                 if (dialog.ShowDialog(this) == DialogResult.OK)
                     messageLabel.Text = "数据库配置已更新，请重新登录。";

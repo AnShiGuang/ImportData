@@ -5,11 +5,11 @@ using System.Windows.Forms;
 namespace 批量导入程序重制版
 {
     /// <summary>
-    /// 接苯放射设置：对应旧程序 接苯放射设置窗体 的后台逻辑，写入 接苯设置 表。
+    /// 接苯放射设置：对应旧程序 接苯设置窗体 的后台逻辑，写入 接苯设置 表。
     /// </summary>
-    public partial class 接苯放射设置窗体 : Form
+    public partial class 接苯设置窗体 : Form
     {
-        public 接苯放射设置窗体()
+        public 接苯设置窗体()
         {
             InitializeComponent();
         }

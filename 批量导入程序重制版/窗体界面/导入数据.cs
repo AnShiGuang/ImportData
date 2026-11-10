@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace 批量导入程序重制版
 {
-    public sealed partial class 导入数据窗体 : 页面基类
+    public sealed partial class 导入数据 : 页面基类
     {
         public event EventHandler ViewProgramLogRequested;
         private readonly string userName;
         private List<PersonRow> currentPeople = new List<PersonRow>();
         private bool synchronizingSelectAll;
 
-        public 导入数据窗体() : this(string.Empty) { }
+        public 导入数据() : this(string.Empty) { }
 
-        public 导入数据窗体(string userName)
+        public 导入数据(string userName)
         {
             this.userName = userName;
             AntdUI.Style.SetPrimary(Color.FromArgb(35, 145, 112));

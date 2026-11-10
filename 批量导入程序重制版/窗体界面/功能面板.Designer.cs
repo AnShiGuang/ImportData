@@ -1,6 +1,6 @@
 namespace 批量导入程序重制版
 {
-    partial class 功能面板窗体
+    partial class 功能面板
     {
         private AntdUI.PageHeader pageHeader1;
         private System.Windows.Forms.Panel panel1;
@@ -310,13 +310,13 @@ namespace 批量导入程序重制版
             this.btn条件勾选.Text = "条件勾选（未开放）";
             this.btn条件勾选.Click += new System.EventHandler(this.btn条件勾选_Click);
             // 
-            // 功能面板窗体
+            // 功能面板
             // 
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(918, 680);
             this.Controls.Add(this.pageHeader1);
             this.Controls.Add(this.panel1);
-            this.Name = "功能面板窗体";
+            this.Name = "功能面板";
             this.Padding = new System.Windows.Forms.Padding(28);
             this.Text = "功能面板";
             this.panel1.ResumeLayout(false);

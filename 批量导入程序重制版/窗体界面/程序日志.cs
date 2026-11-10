@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace 批量导入程序重制版
 {
-    public sealed partial class 程序日志窗体 : 页面基类
+    public sealed partial class 程序日志 : 页面基类
     {
         public event EventHandler FunctionPanelRequested;
         private readonly string userName;
@@ -17,9 +17,9 @@ namespace 批量导入程序重制版
         private bool reloadPending;
         private bool logReadErrorShown;
 
-        public 程序日志窗体() : this(string.Empty) { }
+        public 程序日志() : this(string.Empty) { }
 
-        public 程序日志窗体(string userName)
+        public 程序日志(string userName)
         {
             this.userName = userName;
             InitializeComponent();
