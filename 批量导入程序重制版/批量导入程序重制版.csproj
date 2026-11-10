@@ -119,10 +119,10 @@
     <Compile Include="窗体界面\程序架构\用户登录.Designer.cs">
       <DependentUpon>用户登录.cs</DependentUpon>
     </Compile>
-    <Compile Include="窗体界面\程序主页.cs">
+    <Compile Include="窗体界面\功能菜单\程序主页.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="窗体界面\程序主页.Designer.cs">
+    <Compile Include="窗体界面\功能菜单\程序主页.Designer.cs">
       <DependentUpon>程序主页.cs</DependentUpon>
     </Compile>
     <Compile Include="窗体界面\程序架构\程序主体.cs">
@@ -131,22 +131,22 @@
     <Compile Include="窗体界面\程序架构\程序主体.Designer.cs">
       <DependentUpon>程序主体.cs</DependentUpon>
     </Compile>
-    <Compile Include="窗体界面\导入数据.cs">
+    <Compile Include="窗体界面\功能菜单\导入数据.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="窗体界面\导入数据.Designer.cs">
+    <Compile Include="窗体界面\功能菜单\导入数据.Designer.cs">
       <DependentUpon>导入数据.cs</DependentUpon>
     </Compile>
-    <Compile Include="窗体界面\程序日志.cs">
+    <Compile Include="窗体界面\功能菜单\程序日志.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="窗体界面\程序日志.Designer.cs">
+    <Compile Include="窗体界面\功能菜单\程序日志.Designer.cs">
       <DependentUpon>程序日志.cs</DependentUpon>
     </Compile>
-    <Compile Include="窗体界面\功能面板.cs">
+    <Compile Include="窗体界面\功能菜单\功能面板.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="窗体界面\功能面板.Designer.cs">
+    <Compile Include="窗体界面\功能菜单\功能面板.Designer.cs">
       <DependentUpon>功能面板.cs</DependentUpon>
     </Compile>
     <Compile Include="窗体界面\功能展示\操作手册窗体.cs">
@@ -167,10 +167,10 @@
     <Compile Include="窗体界面\功能展示\提示信息窗体.Designer.cs">
       <DependentUpon>提示信息窗体.cs</DependentUpon>
     </Compile>
-    <Compile Include="窗体界面\配置参数.cs">
+    <Compile Include="窗体界面\功能菜单\配置参数.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="窗体界面\配置参数.Designer.cs">
+    <Compile Include="窗体界面\功能菜单\配置参数.Designer.cs">
       <DependentUpon>配置参数.cs</DependentUpon>
     </Compile>
     <Compile Include="窗体界面\程序架构\数据配置.cs">
@@ -263,16 +263,16 @@
     <EmbeddedResource Include="Resources\config-admin-required.png">
       <LogicalName>批量导入程序重制版.Resources.config-admin-required.png</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="窗体界面\配置参数.resx">
+    <EmbeddedResource Include="窗体界面\功能菜单\配置参数.resx">
       <DependentUpon>配置参数.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="窗体界面\程序架构\数据配置.resx">
       <DependentUpon>数据配置.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="窗体界面\功能面板.resx">
+    <EmbeddedResource Include="窗体界面\功能菜单\功能面板.resx">
       <DependentUpon>功能面板.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="窗体界面\导入数据.resx">
+    <EmbeddedResource Include="窗体界面\功能菜单\导入数据.resx">
       <DependentUpon>导入数据.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="窗体界面\程序架构\程序主体.resx">
@@ -281,13 +281,13 @@
     <EmbeddedResource Include="窗体界面\程序架构\用户登录.resx">
       <DependentUpon>用户登录.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="窗体界面\程序主页.resx">
+    <EmbeddedResource Include="窗体界面\功能菜单\程序主页.resx">
       <DependentUpon>程序主页.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="窗体界面\程序架构\页面基类.resx">
       <DependentUpon>页面基类.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="窗体界面\程序日志.resx">
+    <EmbeddedResource Include="窗体界面\功能菜单\程序日志.resx">
       <DependentUpon>程序日志.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
