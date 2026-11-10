@@ -13,6 +13,7 @@ namespace 批量导入程序重制版
     public sealed partial class ImportDataForm : PageFormBase
     {
         public event EventHandler ViewProgramLogRequested;
+        public event EventHandler FunctionPanelRequested;
         private readonly string userName;
         private List<PersonRow> currentPeople = new List<PersonRow>();
         private bool synchronizingSelectAll;
@@ -26,7 +27,7 @@ namespace 批量导入程序重制版
             InitializeComponent();
             startDatePicker.Value = DateTime.Today;
             endDatePicker.Value = DateTime.Today;
-            LoadSystemIds();
+            Load += async (s, e) => await LoadSystemIdsAsync();
             Resize += ImportDataForm_Resize;
             ConfigurePeopleGrid();
             LayoutSearchControls();
@@ -45,6 +46,35 @@ namespace 批量导入程序重制版
             LayoutSearchControls();
         }
 
+        /// <summary>
+        /// 更多条件：显示/隐藏附加查询条件（单位名称、科室类型）
+        /// </summary>
+        private void btnMoreCondition_Click(object sender, EventArgs e)
+        {
+            moreConditionPanel.Visible = !moreConditionPanel.Visible;
+            btnMoreCondition.Text = moreConditionPanel.Visible ? "收起条件" : "更多条件";
+            LayoutSearchControls();
+        }
+
+        /// <summary>
+        /// 条件查询：打开数据库查询器
+        /// </summary>
+        private void btnConditionQuery_Click(object sender, EventArgs e)
+        {
+            using (var form = new SqlQueryForm())
+            {
+                form.ShowDialog(this);
+            }
+        }
+
+        /// <summary>
+        /// 功能：切换到功能面板
+        /// </summary>
+        private void btnOpenFunction_Click(object sender, EventArgs e)
+        {
+            FunctionPanelRequested?.Invoke(this, EventArgs.Empty);
+        }
+
         private void peopleGrid_Resize(object sender, EventArgs e)
         {
             ConfigurePeopleGrid();
@@ -54,56 +84,66 @@ namespace 批量导入程序重制版
         {
             peopleGrid.Width = Math.Max(1, ClientSize.Width - 24);
 
-            // 顶部查询区按设计器比例排布：五个字段一行，两个按钮位于日期字段正下方。
+            // 顶部工具栏（更多条件/条件查询/功能）占 44px，其下是查询区。
+            // 查询区：系统标识、申请单号、体检编号、开始日期、结束日期。
+            // 宽度足够时（如窗口最大化）把“查询/上传”按钮与文本框排在同一行；否则按钮换到第二行。
             const int left = 12;
             const int rightMargin = 12;
             const int gap = 6;
-            const int labelY = 11;
-            const int inputY = 31;
+            const int topOffset = 44;
+            var labelY = 11 + topOffset;
+            var inputY = 31 + topOffset;
             const int inputHeight = 34;
-            const int buttonY = 71;
-            const int buttonHeight = 43;
+            const int buttonWidth = 124;
 
-            var available = Math.Max(120, ClientSize.Width - left - rightMargin - gap * 4);
-            // 设计器中的字段宽度：系统标识 139、申请单号 153、体检编号 153、开始日期 153、结束日期 153。
+            var available = Math.Max(120, ClientSize.Width - left - rightMargin);
+            // 设计器中的字段宽度比例：系统标识 139、申请单号 153、体检编号 153、开始日期 153、结束日期 153。
             const int designTotal = 139 + 153 + 153 + 153 + 153;
-            var systemIdWidth = (int)Math.Round(available * 139d / designTotal);
-            var applicationWidth = (int)Math.Round(available * 153d / designTotal);
-            var examWidth = (int)Math.Round(available * 153d / designTotal);
-            var startWidth = (int)Math.Round(available * 153d / designTotal);
-            var endWidth = available - systemIdWidth - applicationWidth - examWidth - startWidth;
+            var buttonsWidth = buttonWidth * 2 + gap;
+            var fieldsAvailable = Math.Max(120, available - buttonsWidth - gap);
+
+            var systemIdWidth = (int)Math.Round(fieldsAvailable * 139d / designTotal);
+            var applicationWidth = (int)Math.Round(fieldsAvailable * 153d / designTotal);
+            var examWidth = (int)Math.Round(fieldsAvailable * 153d / designTotal);
+            var startWidth = (int)Math.Round(fieldsAvailable * 153d / designTotal);
+            var endWidth = fieldsAvailable - systemIdWidth - applicationWidth - examWidth - startWidth;
 
             var x = left;
             x = PlaceSearchField(label2, selSystemId, x, systemIdWidth, labelY, inputY, inputHeight);
             x = PlaceSearchField(applicationLabel, applicationInput, x, applicationWidth, labelY, inputY, inputHeight);
             x = PlaceSearchField(examLabel, examInput, x, examWidth, labelY, inputY, inputHeight);
-            var startDateX = x;
             x = PlaceSearchField(startDateLabel, startDatePicker, x, startWidth, labelY, inputY, inputHeight);
-            var endDateX = x;
             x = PlaceSearchField(endDateLabel, endDatePicker, x, endWidth, labelY, inputY, inputHeight);
 
-            queryDataButton.Location = new Point(startDateX, buttonY);
-            queryDataButton.Size = new Size(startWidth, buttonHeight);
-            uploadButton.Location = new Point(endDateX, buttonY);
-            uploadButton.Size = new Size(endWidth, buttonHeight);
+            // 查询/导入按钮放在查询区最右侧，与输入框同一行
+            queryDataButton.Location = new Point(ClientSize.Width - rightMargin - buttonsWidth, inputY);
+            queryDataButton.Size = new Size(buttonWidth, inputHeight);
+            uploadButton.Location = new Point(ClientSize.Width - rightMargin - buttonWidth, inputY);
+            uploadButton.Size = new Size(buttonWidth, inputHeight);
 
-            peopleGrid.Location = new Point(12, 120);
-            peopleGrid.Height = Math.Max(120, ClientSize.Height - 153);
+            var queryBottom = inputY + inputHeight;
+            // 更多条件面板位于查询区下方，显示时把人员列表向下推
+            moreConditionPanel.Location = new Point(left, queryBottom + 6);
+            var gridTop = moreConditionPanel.Visible ? moreConditionPanel.Bottom + 6 : queryBottom + 38;
+            peopleGrid.Location = new Point(12, gridTop);
+            peopleGrid.Height = Math.Max(120, ClientSize.Height - peopleGrid.Top - 8);
             PositionPeopleListHeading();
         }
 
-        private void LoadSystemIds()
+        private async Task LoadSystemIdsAsync()
         {
             try
             {
+                var campus = 院区Helper.规范化院区(SettingHelper.LoadConfig().LocalCampus);
+                var ids = await Task.Run(() => 标识Helper.获取院区标识列表(campus));
+                if (IsDisposed) return;
                 selSystemId.Items.Clear();
-                var ids = 标识Helper.获取院区标识列表(null);
                 selSystemId.Items.AddRange(ids.Cast<object>().ToArray());
                 if (selSystemId.Items.Count > 0) selSystemId.Text = ids[0];
             }
             catch
             {
-                // 数据库不可用时保持空列表
+                if (!IsDisposed) selSystemId.Items.Clear();
             }
         }
 
@@ -220,10 +260,10 @@ namespace 批量导入程序重制版
             statusLabel.Text = "正在查询数据库...";
             var start = hasDateRange ? startDate.Value.Date : DateTime.MinValue;
             var endExclusive = hasDateRange ? endDate.Value.Date.AddDays(1) : DateTime.MaxValue;
-            QueryPeopleAsync(hasDateRange, start, endExclusive, examNumber, personName, string.Empty);
+            await QueryPeopleAsync(hasDateRange, start, endExclusive, examNumber, personName, unitNameInput.Text.Trim());
         }
 
-        private async void QueryPeopleAsync(bool hasDateRange, DateTime startDate, DateTime endExclusive, string examNumber, string personName, string unitName)
+        private async Task QueryPeopleAsync(bool hasDateRange, DateTime startDate, DateTime endExclusive, string examNumber, string personName, string unitName)
         {
             try
             {
@@ -271,12 +311,33 @@ namespace 批量导入程序重制版
                 return;
             }
 
+            await UploadAsync(selected);
+        }
+
+        /// <summary>
+        /// 自动导入：查询当前系统标识下的全部人员并上传，返回结果摘要。
+        /// </summary>
+        public async Task<string> RunAutoImportAsync()
+        {
+            if (string.IsNullOrWhiteSpace(AppConfig.ConnectionString))
+                return "尚未配置数据库连接。";
+
+            await QueryPeopleAsync(false, DateTime.MinValue, DateTime.MaxValue, string.Empty, string.Empty, unitNameInput.Text.Trim());
+            if (IsDisposed) return string.Empty;
+            if (currentPeople.Count == 0)
+                return "未查询到需要导入的人员。";
+
+            foreach (var person in currentPeople) person.Selected = true;
+            return await UploadAsync(currentPeople.ToList());
+        }
+
+        private async Task<string> UploadAsync(List<PersonRow> selected)
+        {
             if (string.IsNullOrWhiteSpace(AppConfig.ConnectionString)
                 || string.IsNullOrWhiteSpace(AppConfig.UploadBaseUrl)
                 || string.IsNullOrWhiteSpace(AppConfig.BatchImportUserCode))
             {
-                MessageBox.Show(this, "请先在“配置参数”中保存批量导入服务地址和账号代码。", "上传数据", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                return "请先在“配置参数”中保存批量导入服务地址和账号代码。";
             }
 
             var failures = new List<string>();
@@ -295,8 +356,7 @@ namespace 批量导入程序重制版
                     statusLabel.Text = "接口密钥获取失败。";
                     await TryWriteAuditLogAsync(操作日志.Program, "严重", "自动获取批量导入接口密钥失败", keyException.Message,
                         "本次上传尚未提交任何人员数据");
-                    MessageBox.Show(this, "自动获取接口密钥失败：" + keyException.Message, "上传数据", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    return "自动获取接口密钥失败：" + keyException.Message;
                 }
 
                 for (var i = 0; i < selected.Count; i++)
@@ -344,11 +404,7 @@ namespace 批量导入程序重制版
                 statusLabel.Text = summary;
                 await TryWriteAuditLogAsync(操作日志.Upload, failures.Count == 0 ? "常规" : "警告", "批量上传完成", summary,
                     "当前用户=" + userName + "；选择人数=" + selected.Count + "；成功人数=" + successCount + "；失败人数=" + failures.Count);
-                var detail = failures.Count == 0 ? summary : summary + Environment.NewLine + Environment.NewLine
-                    + string.Join(Environment.NewLine, failures.Take(8))
-                    + (failures.Count > 8 ? Environment.NewLine + "其余失败详情请查看上传日志。" : string.Empty);
-                MessageBox.Show(this, detail, "上传数据", MessageBoxButtons.OK,
-                    failures.Count == 0 ? MessageBoxIcon.Information : MessageBoxIcon.Warning);
+                return summary;
             }
             finally
             {

@@ -16,6 +16,13 @@ namespace 批量导入程序重制版
         private AntdUI.Checkbox selectAllCheckBox;
         private AntdUI.Button uploadButton;
         private System.Windows.Forms.Label statusLabel;
+        private System.Windows.Forms.Panel importToolBar;
+        private AntdUI.Button btnMoreCondition;
+        private AntdUI.Button btnConditionQuery;
+        private AntdUI.Button btnOpenFunction;
+        private System.Windows.Forms.Panel moreConditionPanel;
+        private AntdUI.Input unitNameInput;
+        private AntdUI.Select deptTypeSelect;
 
         private void InitializeComponent()
         {
@@ -36,6 +43,13 @@ namespace 批量导入程序重制版
             this.label1 = new System.Windows.Forms.Label();
             this.selSystemId = new AntdUI.Select();
             this.label2 = new System.Windows.Forms.Label();
+            this.importToolBar = new System.Windows.Forms.Panel();
+            this.btnMoreCondition = new AntdUI.Button();
+            this.btnConditionQuery = new AntdUI.Button();
+            this.btnOpenFunction = new AntdUI.Button();
+            this.moreConditionPanel = new System.Windows.Forms.Panel();
+            this.unitNameInput = new AntdUI.Input();
+            this.deptTypeSelect = new AntdUI.Select();
             this.peopleGrid.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -219,11 +233,78 @@ namespace 批量导入程序重制版
             this.uploadButton.Name = "uploadButton";
             this.uploadButton.Size = new System.Drawing.Size(153, 43);
             this.uploadButton.TabIndex = 11;
-            this.uploadButton.Text = "上传数据";
+            this.uploadButton.Text = "导入数据";
             this.uploadButton.Click += new System.EventHandler(this.uploadButton_Click);
             // 
             // label1
             // 
+            //
+            // importToolBar
+            //
+            this.importToolBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.importToolBar.Height = 44;
+            this.importToolBar.Controls.Add(this.btnMoreCondition);
+            this.importToolBar.Controls.Add(this.btnConditionQuery);
+            this.importToolBar.Controls.Add(this.btnOpenFunction);
+            //
+            // btnMoreCondition
+            //
+            this.btnMoreCondition.BorderWidth = 1F;
+            this.btnMoreCondition.Location = new System.Drawing.Point(12, 5);
+            this.btnMoreCondition.Name = "btnMoreCondition";
+            this.btnMoreCondition.Size = new System.Drawing.Size(90, 34);
+            this.btnMoreCondition.Text = "更多条件";
+            this.btnMoreCondition.Click += new System.EventHandler(this.btnMoreCondition_Click);
+            //
+            // btnConditionQuery
+            //
+            this.btnConditionQuery.BorderWidth = 1F;
+            this.btnConditionQuery.Location = new System.Drawing.Point(108, 5);
+            this.btnConditionQuery.Name = "btnConditionQuery";
+            this.btnConditionQuery.Size = new System.Drawing.Size(90, 34);
+            this.btnConditionQuery.Text = "条件查询";
+            this.btnConditionQuery.Click += new System.EventHandler(this.btnConditionQuery_Click);
+            //
+            // btnOpenFunction
+            //
+            this.btnOpenFunction.BorderWidth = 1F;
+            this.btnOpenFunction.Location = new System.Drawing.Point(204, 5);
+            this.btnOpenFunction.Name = "btnOpenFunction";
+            this.btnOpenFunction.Size = new System.Drawing.Size(90, 34);
+            this.btnOpenFunction.Text = "功能";
+            this.btnOpenFunction.Click += new System.EventHandler(this.btnOpenFunction_Click);
+            //
+            // moreConditionPanel
+            //
+            this.moreConditionPanel.Location = new System.Drawing.Point(12, 111);
+            this.moreConditionPanel.Size = new System.Drawing.Size(420, 44);
+            this.moreConditionPanel.Visible = false;
+            this.moreConditionPanel.Controls.Add(this.unitNameInput);
+            this.moreConditionPanel.Controls.Add(this.deptTypeSelect);
+            //
+            // unitNameInput
+            //
+            this.unitNameInput.BorderActive = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(157)))), ((int)(((byte)(143)))));
+            this.unitNameInput.BorderHover = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(157)))), ((int)(((byte)(143)))));
+            this.unitNameInput.Location = new System.Drawing.Point(0, 5);
+            this.unitNameInput.Name = "unitNameInput";
+            this.unitNameInput.PlaceholderText = "单位名称";
+            this.unitNameInput.Radius = 7;
+            this.unitNameInput.Size = new System.Drawing.Size(160, 34);
+            //
+            // deptTypeSelect
+            //
+            this.deptTypeSelect.BorderActive = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(157)))), ((int)(((byte)(143)))));
+            this.deptTypeSelect.BorderHover = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(157)))), ((int)(((byte)(143)))));
+            this.deptTypeSelect.Location = new System.Drawing.Point(166, 5);
+            this.deptTypeSelect.Name = "deptTypeSelect";
+            this.deptTypeSelect.PlaceholderText = "科室类型";
+            this.deptTypeSelect.Radius = 7;
+            this.deptTypeSelect.Size = new System.Drawing.Size(140, 34);
+            this.deptTypeSelect.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            //
+            // label1
+            //
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
@@ -262,6 +343,8 @@ namespace 批量导入程序重制版
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(948, 678);
             this.Controls.Add(this.selSystemId);
+            this.Controls.Add(this.importToolBar);
+            this.Controls.Add(this.moreConditionPanel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.startDateLabel);
