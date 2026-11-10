@@ -68,7 +68,9 @@ namespace 批量导入程序重制版
             // 设计器中的字段宽度比例：系统标识 139、申请单号 153、体检编号 153、开始日期 153、结束日期 153。
             const int designTotal = 139 + 153 + 153 + 153 + 153;
             var buttonsWidth = buttonWidth * 2 + gap;
-            var fieldsAvailable = Math.Max(120, available - buttonsWidth - gap);
+            const int fieldCount = 5;
+            // 字段之间还有 (fieldCount-1) 个间距，加上与按钮之间的 1 个间距，都要从可用宽度里扣除。
+            var fieldsAvailable = Math.Max(120, available - buttonsWidth - gap * fieldCount);
 
             var systemIdWidth = (int)Math.Round(fieldsAvailable * 139d / designTotal);
             var applicationWidth = (int)Math.Round(fieldsAvailable * 153d / designTotal);
