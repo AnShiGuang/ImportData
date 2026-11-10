@@ -66,7 +66,7 @@ namespace 批量导入程序重制版
             }
             catch (Exception ex)
             {
-                new 提示窗体("加载失败：", "科室列表加载异常，详细信息：\r" + ex.ToString(), false, false, "好的", "").ShowDialog();
+                new 提示信息窗体("加载失败：", "科室列表加载异常，详细信息：\r" + ex.ToString(), false, false, "好的", "").ShowDialog();
             }
         }
 
@@ -129,7 +129,7 @@ namespace 批量导入程序重制版
                 if (!await new SqlSugarRepository<接口_配置信息表>(_db)
                                    .UpdateWhereAsync(t => new 接口_配置信息表 { 参数值 = strDepts }, t => t.配置名称 == m_strSystemName && t.参数标识 == "科室名称"))
                 {
-                    提示窗体 errorTip = new 提示窗体("更新失败：", "发生了位置的错误，未能更新成功科室信息！", false, false, "好的", "");
+                    提示信息窗体 errorTip = new 提示信息窗体("更新失败：", "发生了位置的错误，未能更新成功科室信息！", false, false, "好的", "");
                     errorTip.ShowDialog();
                 }
 
@@ -150,7 +150,7 @@ namespace 批量导入程序重制版
             }
             catch (Exception ex)
             {
-                提示窗体 errorTip = new 提示窗体("更新错误：", ex.Message, false, false, "好的", "");
+                提示信息窗体 errorTip = new 提示信息窗体("更新错误：", ex.Message, false, false, "好的", "");
                 errorTip.ShowDialog();
             }
         }

@@ -1,6 +1,6 @@
 namespace 批量导入程序重制版
 {
-    partial class 登录窗体
+    partial class 用户登录
     {
         private System.ComponentModel.IContainer components = null;
         private System.Windows.Forms.ToolTip databaseIconToolTip;
@@ -352,7 +352,7 @@ namespace 批量导入程序重制版
             this.pictureBox4.TabIndex = 417;
             this.pictureBox4.TabStop = false;
             // 
-            // 登录窗体
+            // 用户登录
             // 
             this.AcceptButton = this.loginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -366,7 +366,7 @@ namespace 批量导入程序重制版
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "登录窗体";
+            this.Name = "用户登录";
             this.Resizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "批量导入程序重制版";

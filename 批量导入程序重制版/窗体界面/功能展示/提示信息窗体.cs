@@ -28,7 +28,7 @@ namespace 批量导入程序重制版
         }
     }
 
-    public partial class 提示窗体 : AntdUI.Window
+    public partial class 提示信息窗体 : AntdUI.Window
     {
         private AppSettings _settings;
         private System.Windows.Forms.Panel _infoCard;
@@ -40,7 +40,7 @@ namespace 批量导入程序重制版
             base.OnFormClosing(e);
         }
 
-        public 提示窗体(string strLable, string strText, bool blShowExit, bool blShowPicInfo, string btnOkName, string btnExitName)
+        public 提示信息窗体(string strLable, string strText, bool blShowExit, bool blShowPicInfo, string btnOkName, string btnExitName)
         {
             InitializeComponent();
             lblLable.Text = strLable;

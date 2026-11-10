@@ -8,22 +8,22 @@ using System.Windows.Forms;
 
 namespace 批量导入程序重制版
 {
-    public sealed partial class 主页窗体 : 页面基类
+    public sealed partial class 程序主体 : 页面基类
     {
         private bool _statsLoading;
 
-        public 主页窗体()
+        public 程序主体()
         {
             InitializeComponent();
             VisibleChanged += frmHome_VisibleChanged;
         }
 
-        public 主页窗体(string displayName) : this()
+        public 程序主体(string displayName) : this()
         {
             SetWelcomeUser(displayName, false);
         }
 
-        public 主页窗体(string displayName, bool isAdmin) : this()
+        public 程序主体(string displayName, bool isAdmin) : this()
         {
             SetWelcomeUser(displayName, isAdmin);
         }

@@ -14,7 +14,7 @@ using System.Drawing;
 
 namespace 批量导入程序重制版
 {
-    public sealed partial class 登录窗体 : AntdUI.Window
+    public sealed partial class 用户登录 : AntdUI.Window
     {
         private readonly Timer userLookupTimer;
         private readonly Timer lockCountdownTimer;
@@ -29,7 +29,7 @@ namespace 批量导入程序重制版
         internal static Image LoadLoginImage(string imageName)
         {
             var resourceName = "批量导入程序重制版.Resources." + imageName;
-            using (var stream = typeof(登录窗体).Assembly.GetManifestResourceStream(resourceName))
+            using (var stream = typeof(用户登录).Assembly.GetManifestResourceStream(resourceName))
             {
                 if (stream == null) return null;
                 using (var source = Image.FromStream(stream)) return new Bitmap(source);
@@ -94,7 +94,7 @@ namespace 批量导入程序重制版
             return base.ProcessDialogKey(keyData);
         }
 
-        public 登录窗体()
+        public 用户登录()
         {
             InitializeComponent(); 
             pictureBox4.BackgroundImage = LoadLoginImage("login-bg.png");
@@ -282,7 +282,7 @@ namespace 批量导入程序重制版
             {
                 messageLabel.ForeColor = System.Drawing.Color.Firebrick;
                 messageLabel.Text = "尚未配置数据库连接。";
-                using (var dialog = new 数据配置窗体())
+                using (var dialog = new 数据配置())
                 {
                     if (dialog.ShowDialog(this) == DialogResult.OK)
                     {
@@ -405,7 +405,7 @@ namespace 批量导入程序重制版
                 "数据库连接失败", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
             if (answer != DialogResult.Yes) return;
 
-            using (var dialog = new 数据配置窗体())
+            using (var dialog = new 数据配置())
             {
                 if (dialog.ShowDialog(this) == DialogResult.OK)
                     messageLabel.Text = "数据库配置已更新，请重新登录。";

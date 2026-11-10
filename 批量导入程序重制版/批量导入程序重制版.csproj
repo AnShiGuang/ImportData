@@ -113,11 +113,11 @@
     <Compile Include="核心\项目对应Helper.cs" />
     <Compile Include="核心\条件勾选Helper.cs" />
     <Compile Include="核心\图片处理.cs" />
-    <Compile Include="窗体界面\程序架构\登录窗体.cs">
+    <Compile Include="窗体界面\程序架构\用户登录.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="窗体界面\程序架构\登录窗体.Designer.cs">
-      <DependentUpon>登录窗体.cs</DependentUpon>
+    <Compile Include="窗体界面\程序架构\用户登录.Designer.cs">
+      <DependentUpon>用户登录.cs</DependentUpon>
     </Compile>
     <Compile Include="窗体界面\程序主页.cs">
       <SubType>Form</SubType>
@@ -125,11 +125,11 @@
     <Compile Include="窗体界面\程序主页.Designer.cs">
       <DependentUpon>程序主页.cs</DependentUpon>
     </Compile>
-    <Compile Include="窗体界面\程序架构\主页窗体.cs">
+    <Compile Include="窗体界面\程序架构\程序主体.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="窗体界面\程序架构\主页窗体.Designer.cs">
-      <DependentUpon>主页窗体.cs</DependentUpon>
+    <Compile Include="窗体界面\程序架构\程序主体.Designer.cs">
+      <DependentUpon>程序主体.cs</DependentUpon>
     </Compile>
     <Compile Include="窗体界面\导入数据.cs">
       <SubType>Form</SubType>
@@ -161,11 +161,11 @@
     <Compile Include="窗体界面\功能展示\标识配置窗体.Designer.cs">
       <DependentUpon>标识配置窗体.cs</DependentUpon>
     </Compile>
-    <Compile Include="窗体界面\功能展示\提示窗体.cs">
+    <Compile Include="窗体界面\功能展示\提示信息窗体.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="窗体界面\功能展示\提示窗体.Designer.cs">
-      <DependentUpon>提示窗体.cs</DependentUpon>
+    <Compile Include="窗体界面\功能展示\提示信息窗体.Designer.cs">
+      <DependentUpon>提示信息窗体.cs</DependentUpon>
     </Compile>
     <Compile Include="窗体界面\配置参数.cs">
       <SubType>Form</SubType>
@@ -173,11 +173,11 @@
     <Compile Include="窗体界面\配置参数.Designer.cs">
       <DependentUpon>配置参数.cs</DependentUpon>
     </Compile>
-    <Compile Include="窗体界面\程序架构\数据配置窗体.cs">
+    <Compile Include="窗体界面\程序架构\数据配置.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="窗体界面\程序架构\数据配置窗体.Designer.cs">
-      <DependentUpon>数据配置窗体.cs</DependentUpon>
+    <Compile Include="窗体界面\程序架构\数据配置.Designer.cs">
+      <DependentUpon>数据配置.cs</DependentUpon>
     </Compile>
     <Compile Include="窗体界面\程序架构\页面基类.cs">
       <SubType>Form</SubType>
@@ -266,8 +266,8 @@
     <EmbeddedResource Include="窗体界面\配置参数.resx">
       <DependentUpon>配置参数.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="窗体界面\程序架构\数据配置窗体.resx">
-      <DependentUpon>数据配置窗体.cs</DependentUpon>
+    <EmbeddedResource Include="窗体界面\程序架构\数据配置.resx">
+      <DependentUpon>数据配置.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="窗体界面\功能面板.resx">
       <DependentUpon>功能面板.cs</DependentUpon>
@@ -275,11 +275,11 @@
     <EmbeddedResource Include="窗体界面\导入数据.resx">
       <DependentUpon>导入数据.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="窗体界面\程序架构\主页窗体.resx">
-      <DependentUpon>主页窗体.cs</DependentUpon>
+    <EmbeddedResource Include="窗体界面\程序架构\程序主体.resx">
+      <DependentUpon>程序主体.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="窗体界面\程序架构\登录窗体.resx">
-      <DependentUpon>登录窗体.cs</DependentUpon>
+    <EmbeddedResource Include="窗体界面\程序架构\用户登录.resx">
+      <DependentUpon>用户登录.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="窗体界面\程序主页.resx">
       <DependentUpon>程序主页.cs</DependentUpon>

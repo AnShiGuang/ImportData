@@ -1,6 +1,6 @@
 namespace 批量导入程序重制版
 {
-    partial class 提示窗体
+    partial class 提示信息窗体
     {
         /// <summary>
         /// Required designer variable.
@@ -126,7 +126,7 @@ namespace 批量导入程序重制版
             this.btnExit.Text = "关闭";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // 提示窗体
+            // 提示信息窗体
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -137,9 +137,9 @@ namespace 批量导入程序重制版
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.rxtText);
             this.Controls.Add(this.lblLable);
-            this.Name = "提示窗体";
+            this.Name = "提示信息窗体";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "提示窗体";
+            this.Text = "提示信息窗体";
             this.Load += new System.EventHandler(this.FormTips_Load);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();

@@ -99,7 +99,7 @@ namespace 批量导入程序重制版
                     btnJieXi.Enabled = true;
                     btnSave.Enabled = true;
                     btnSaveConfig.Enabled = true;
-                    new 提示窗体("加载失败：", "配置页面初始化异常，详细信息：\r" + ex.ToString(), false, false, "好的", "").ShowDialog();
+                    new 提示信息窗体("加载失败：", "配置页面初始化异常，详细信息：\r" + ex.ToString(), false, false, "好的", "").ShowDialog();
                 }
             };
         }
@@ -147,7 +147,7 @@ namespace 批量导入程序重制版
             }
             catch (Exception ex)
             {
-                提示窗体 from = new 提示窗体("解析错误：", ex.ToString(), false, false, "好的", "");
+                提示信息窗体 from = new 提示信息窗体("解析错误：", ex.ToString(), false, false, "好的", "");
                 from.ShowDialog();
                 return;
             }
@@ -269,7 +269,7 @@ namespace 批量导入程序重制版
                 }
                 else
                 {
-                    提示窗体 errorTip = new 提示窗体("验证失败：", ex.ToString(), false, false, "好的", "");
+                    提示信息窗体 errorTip = new 提示信息窗体("验证失败：", ex.ToString(), false, false, "好的", "");
                     errorTip.ShowDialog();
                 }
                 btnYanZheng.Loading = false;
@@ -282,7 +282,7 @@ namespace 批量导入程序重制版
         {
             if (!rxtSQL.Text.ToLower().Contains("1=1"))
             {
-                提示窗体 errorTip = new 提示窗体("验证失败：", "★ where 1=1 条件是必须添加的！", false, false, "好的", "");
+                提示信息窗体 errorTip = new 提示信息窗体("验证失败：", "★ where 1=1 条件是必须添加的！", false, false, "好的", "");
                 errorTip.ShowDialog();
                 return;
             }
@@ -349,7 +349,7 @@ namespace 批量导入程序重制版
             }
             catch (Exception ex)
             {
-                提示窗体 errorTip = new 提示窗体("解析失败：", ex.ToString(), false, false, "好的", "");
+                提示信息窗体 errorTip = new 提示信息窗体("解析失败：", ex.ToString(), false, false, "好的", "");
                 errorTip.ShowDialog();
                 btnJieXi.Loading = false;
                 btnJieXi.Enabled = true;
@@ -386,7 +386,7 @@ namespace 批量导入程序重制版
                 string info = ex.ToString();
                 if (info.Contains("NullReferenceException"))
                     info = "请先选择左侧要对应的字段。";
-                提示窗体 errorTip = new 提示窗体("对应错误：", info, false, false, "好的", "");
+                提示信息窗体 errorTip = new 提示信息窗体("对应错误：", info, false, false, "好的", "");
                 errorTip.ShowDialog();
             }
         }
@@ -664,7 +664,7 @@ namespace 批量导入程序重制版
                     tips = btnName + "：";
                     text = $"是否{btnName}标识，后续可再次调整。";
                 }
-                提示窗体 from = new 提示窗体(tips, text, true, false, "取消操作", btnName);
+                提示信息窗体 from = new 提示信息窗体(tips, text, true, false, "取消操作", btnName);
                 from.ShowDialog();
                 m_settings = await Task.Run(() => SettingHelper.LoadConfig());
                 if (m_settings.TrueOrFalse)
@@ -694,14 +694,14 @@ namespace 批量导入程序重制版
             }
             if (string.IsNullOrEmpty(selDeptType.Text))
             {
-                提示窗体 from = new 提示窗体("提示信息：", "请先选择所属科室类型！", false, false, "了解", "");
+                提示信息窗体 from = new 提示信息窗体("提示信息：", "请先选择所属科室类型！", false, false, "了解", "");
                 from.ShowDialog();
                 return;
             }
 
             if (string.IsNullOrWhiteSpace(selCampus.Text))
             {
-                提示窗体 from = new 提示窗体("提示信息：", "请先选择所属院区！", false, false, "了解", "");
+                提示信息窗体 from = new 提示信息窗体("提示信息：", "请先选择所属院区！", false, false, "了解", "");
                 from.ShowDialog();
                 return;
             }
@@ -710,13 +710,13 @@ namespace 批量导入程序重制版
             .Where(t => t.配置名称 == selConfigName.Text).Take(1).Select(t => t.配置名称).FirstAsync();
             if (string.IsNullOrEmpty(selConfigName.Text))
             {
-                提示窗体 from = new 提示窗体("程序提示：", "配置标识名称不可为空！", false, false, "好的", "");
+                提示信息窗体 from = new 提示信息窗体("程序提示：", "配置标识名称不可为空！", false, false, "好的", "");
                 from.ShowDialog();
                 return;
             }
             if (!m_CaoZuo.Contains("Update") && !string.IsNullOrEmpty(sysName))
             {
-                提示窗体 from = new 提示窗体("程序提示：", "\r配置标识已存在，如需修改请在功能面板选择修改标识进行处理。\r如需继续新增，请修改为其他名称。", false, false, "好的", "");
+                提示信息窗体 from = new 提示信息窗体("程序提示：", "\r配置标识已存在，如需修改请在功能面板选择修改标识进行处理。\r如需继续新增，请修改为其他名称。", false, false, "好的", "");
                 from.ShowDialog();
                 return;
             }
@@ -724,7 +724,7 @@ namespace 批量导入程序重制版
             selDeptType.Enabled = false;
             if (m_CaoZuo.Contains("Update"))
             {
-                提示窗体 from = new 提示窗体("标识修改：", $"{lblTips.Text} 将修改为 {selConfigName.Text} ，是否确认修改？", true, false, "取消操作", "确认修改");
+                提示信息窗体 from = new 提示信息窗体("标识修改：", $"{lblTips.Text} 将修改为 {selConfigName.Text} ，是否确认修改？", true, false, "取消操作", "确认修改");
                 from.ShowDialog();
                 m_settings = await Task.Run(() => SettingHelper.LoadConfig());
                 if (m_settings.TrueOrFalse)
@@ -735,7 +735,7 @@ namespace 批量导入程序重制版
                     selConfigName.Enabled = true;
                     selDeptType.Enabled = true;
                     await loadSetting(true);
-                    new 提示窗体("操作成功：", "标识修改成功！", false, false, "好的", "").ShowDialog();
+                    new 提示信息窗体("操作成功：", "标识修改成功！", false, false, "好的", "").ShowDialog();
                 }
                 else
                 {
@@ -758,7 +758,7 @@ namespace 批量导入程序重制版
         {
             if (string.IsNullOrWhiteSpace(selConfigName.Text))
             {
-                new 提示窗体("提示信息：", "请先选择或填写配置标识名称！", false, false, "好的", "").ShowDialog();
+                new 提示信息窗体("提示信息：", "请先选择或填写配置标识名称！", false, false, "好的", "").ShowDialog();
                 return;
             }
 
@@ -810,7 +810,7 @@ namespace 批量导入程序重制版
             }
             catch (Exception ex)
             {
-                提示窗体 errorTip = new 提示窗体("更新失败：此配置页将自动关闭！", "\r" + ex.ToString(), false, false, "好的", "");
+                提示信息窗体 errorTip = new 提示信息窗体("更新失败：此配置页将自动关闭！", "\r" + ex.ToString(), false, false, "好的", "");
                 errorTip.ShowDialog();
                 this.Close();
                 return false;
@@ -903,7 +903,7 @@ namespace 批量导入程序重制版
             }
             catch (Exception ex)
             {
-                提示窗体 errorTip = new 提示窗体("操作失败：", ex.Message, false, false, "好的", "");
+                提示信息窗体 errorTip = new 提示信息窗体("操作失败：", ex.Message, false, false, "好的", "");
                 errorTip.ShowDialog();
                 return false;
             }
@@ -1105,12 +1105,12 @@ namespace 批量导入程序重制版
 
         private void lblWjConStr_Click(object sender, EventArgs e)
         {
-            new 提示窗体("连接参考", "", false, true, "", "关闭").ShowDialog();
+            new 提示信息窗体("连接参考", "", false, true, "", "关闭").ShowDialog();
         }
 
         private void lblSqlHelp_Click(object sender, EventArgs e)
         {
-            new 提示窗体("配置帮助", "", false, true, "", "关闭").ShowDialog();
+            new 提示信息窗体("配置帮助", "", false, true, "", "关闭").ShowDialog();
         }
 
         private async void selDeptType_SelectedIndexChanged(object sender, IntEventArgs e)
@@ -1120,7 +1120,7 @@ namespace 批量导入程序重制版
                 return;
             if (!await SaveDeptInfo())
                 return;
-            提示窗体 fromtips = new 提示窗体("提示信息：", "科室类型修改成功！", false, false, "好的", "");
+            提示信息窗体 fromtips = new 提示信息窗体("提示信息：", "科室类型修改成功！", false, false, "好的", "");
             fromtips.ShowDialog();
 
             updateEnable(selDeptType.Text);
@@ -1148,7 +1148,7 @@ namespace 批量导入程序重制版
 
         private void lblTipsDY_Click(object sender, EventArgs e)
         {
-            提示窗体 fromtips = new 提示窗体("对应要求：", "\r检验：\r体检编号 条码号 组合项目编码 明细项目编码 检查结果 异常标志 检查日期，为必须对应项！" +
+            提示信息窗体 fromtips = new 提示信息窗体("对应要求：", "\r检验：\r体检编号 条码号 组合项目编码 明细项目编码 检查结果 异常标志 检查日期，为必须对应项！" +
                 "\r检查：\r体检编号 条码号 组合项目编码 明细项目编码 检查结果 检查日期，为必须对应项！\r★如不对应可能会导致程序无法正常运行或无法达到预计效果。", false, false, "好的", "");
             fromtips.ShowDialog();
         }

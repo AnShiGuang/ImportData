@@ -1,6 +1,6 @@
 namespace 批量导入程序重制版
 {
-    partial class 数据配置窗体
+    partial class 数据配置
     {
         private AntdUI.Label title;
         private AntdUI.Button modeToggleButton;
@@ -57,7 +57,7 @@ namespace 批量导入程序重制版
             this.builderPanel.SuspendLayout();
             this.SuspendLayout();
             //
-            // 数据配置窗体
+            // 数据配置
             //
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(620, 680);
@@ -341,7 +341,7 @@ namespace 批量导入程序重制版
             this.saveButton.Type = AntdUI.TTypeMini.Primary;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             //
-            // 数据配置窗体
+            // 数据配置
             //
             this.Controls.Add(this.title);
             this.Controls.Add(this.modeToggleButton);

@@ -34,7 +34,7 @@ namespace 批量导入程序重制版
             }
             catch (Exception ex)
             {
-                new 提示窗体("注销异常：", "清除登录信息失败，详细信息：\r" + ex.ToString(), false, false, "好的", "").ShowDialog();
+                new 提示信息窗体("注销异常：", "清除登录信息失败，详细信息：\r" + ex.ToString(), false, false, "好的", "").ShowDialog();
             }
         }
 

@@ -10,7 +10,7 @@ namespace 批量导入程序重制版
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new 登录窗体());
+            Application.Run(new 用户登录());
         }
     }
 }

@@ -1,6 +1,6 @@
 namespace 批量导入程序重制版
 {
-    partial class 主页窗体
+    partial class 程序主体
     {
         private AntdUI.Label homeDescriptionLabel;
         private AntdUI.Label welcomePrefixLabel;
@@ -213,7 +213,7 @@ namespace 批量导入程序重制版
             this.uploadedCountLabel.TabIndex = 1;
             this.uploadedCountLabel.Text = "— 人";
             // 
-            // 主页窗体
+            // 程序主体
             // 
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(918, 680);
@@ -222,7 +222,7 @@ namespace 批量导入程序重制版
             this.Controls.Add(this.welcomeLabel);
             this.Controls.Add(this.statsLayoutPanel);
             this.Controls.Add(this.homeIllustration);
-            this.Name = "主页窗体";
+            this.Name = "程序主体";
             this.Padding = new System.Windows.Forms.Padding(28);
             this.Text = "程序主页";
             ((System.ComponentModel.ISupportInitialize)(this.homeIllustration)).EndInit();

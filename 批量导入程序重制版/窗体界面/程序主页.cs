@@ -60,7 +60,7 @@ namespace 批量导入程序重制版
         private ContentAlignment _logoutButtonTextAlign;
         private Padding _logoutButtonPadding;
         private int _sidebarCollapseDelayTicks;
-        private 主页窗体 _homeForm;
+        private 程序主体 _homeForm;
         private 导入数据 _importDataForm;
         private 程序日志 _programLogForm;
         private 功能面板 _functionPanelForm;
@@ -100,7 +100,7 @@ namespace 批量导入程序重制版
 
         private void CreateChildForms(string displayName, bool isAdmin)
         {
-            _homeForm = new 主页窗体(displayName, isAdmin);
+            _homeForm = new 程序主体(displayName, isAdmin);
             _importDataForm = new 导入数据(_logUserName);
             _importDataForm.ViewProgramLogRequested += importDataForm_ViewProgramLogRequested;
             _programLogForm = new 程序日志(_logUserName);
