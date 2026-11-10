@@ -63,11 +63,11 @@ namespace 批量导入程序重制版
             this.peopleGrid.ColumnFore = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(65)))));
             this.peopleGrid.Controls.Add(this.selectAllCheckBox);
             this.peopleGrid.EmptyText = "暂无人员数据";
-            this.peopleGrid.Location = new System.Drawing.Point(12, 120);
+            this.peopleGrid.Location = new System.Drawing.Point(12, 103);
             this.peopleGrid.Name = "peopleGrid";
             this.peopleGrid.Radius = 8;
             this.peopleGrid.RowHeightHeader = 36;
-            this.peopleGrid.Size = new System.Drawing.Size(923, 525);
+            this.peopleGrid.Size = new System.Drawing.Size(924, 567);
             this.peopleGrid.TabIndex = 5;
             // 
             // selectAllCheckBox
@@ -86,7 +86,7 @@ namespace 批量导入程序重制版
             this.resultCountLabel.AutoSize = true;
             this.resultCountLabel.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.resultCountLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.resultCountLabel.Location = new System.Drawing.Point(72, 97);
+            this.resultCountLabel.Location = new System.Drawing.Point(72, 76);
             this.resultCountLabel.Name = "resultCountLabel";
             this.resultCountLabel.Size = new System.Drawing.Size(71, 17);
             this.resultCountLabel.TabIndex = 6;
@@ -97,7 +97,7 @@ namespace 批量导入程序重制版
             this.startDateLabel.AutoSize = true;
             this.startDateLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
             this.startDateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.startDateLabel.Location = new System.Drawing.Point(624, 11);
+            this.startDateLabel.Location = new System.Drawing.Point(408, 11);
             this.startDateLabel.Name = "startDateLabel";
             this.startDateLabel.Size = new System.Drawing.Size(56, 17);
             this.startDateLabel.TabIndex = 3;
@@ -108,7 +108,7 @@ namespace 批量导入程序重制版
             this.endDateLabel.AutoSize = true;
             this.endDateLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
             this.endDateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.endDateLabel.Location = new System.Drawing.Point(783, 11);
+            this.endDateLabel.Location = new System.Drawing.Point(544, 11);
             this.endDateLabel.Name = "endDateLabel";
             this.endDateLabel.Size = new System.Drawing.Size(56, 17);
             this.endDateLabel.TabIndex = 4;
@@ -120,10 +120,10 @@ namespace 批量导入程序重制版
             this.startDatePicker.BorderActive = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(157)))), ((int)(((byte)(143)))));
             this.startDatePicker.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(225)))), ((int)(((byte)(230)))));
             this.startDatePicker.BorderHover = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(157)))), ((int)(((byte)(143)))));
-            this.startDatePicker.Location = new System.Drawing.Point(623, 31);
+            this.startDatePicker.Location = new System.Drawing.Point(408, 31);
             this.startDatePicker.Name = "startDatePicker";
             this.startDatePicker.Radius = 7;
-            this.startDatePicker.Size = new System.Drawing.Size(153, 34);
+            this.startDatePicker.Size = new System.Drawing.Size(130, 34);
             this.startDatePicker.TabIndex = 8;
             // 
             // endDatePicker
@@ -132,10 +132,10 @@ namespace 批量导入程序重制版
             this.endDatePicker.BorderActive = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(157)))), ((int)(((byte)(143)))));
             this.endDatePicker.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(225)))), ((int)(((byte)(230)))));
             this.endDatePicker.BorderHover = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(157)))), ((int)(((byte)(143)))));
-            this.endDatePicker.Location = new System.Drawing.Point(782, 31);
+            this.endDatePicker.Location = new System.Drawing.Point(544, 31);
             this.endDatePicker.Name = "endDatePicker";
             this.endDatePicker.Radius = 7;
-            this.endDatePicker.Size = new System.Drawing.Size(153, 34);
+            this.endDatePicker.Size = new System.Drawing.Size(132, 34);
             this.endDatePicker.TabIndex = 9;
             // 
             // applicationLabel
@@ -143,7 +143,7 @@ namespace 批量导入程序重制版
             this.applicationLabel.AutoSize = true;
             this.applicationLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
             this.applicationLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.applicationLabel.Location = new System.Drawing.Point(307, 11);
+            this.applicationLabel.Location = new System.Drawing.Point(136, 11);
             this.applicationLabel.Name = "applicationLabel";
             this.applicationLabel.Size = new System.Drawing.Size(56, 17);
             this.applicationLabel.TabIndex = 2;
@@ -156,11 +156,11 @@ namespace 批量导入程序重制版
             this.examInput.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(225)))), ((int)(((byte)(230)))));
             this.examInput.BorderHover = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
             this.examInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(65)))));
-            this.examInput.Location = new System.Drawing.Point(465, 31);
+            this.examInput.Location = new System.Drawing.Point(272, 31);
             this.examInput.Name = "examInput";
             this.examInput.PlaceholderText = "请输入体检编号";
             this.examInput.Radius = 7;
-            this.examInput.Size = new System.Drawing.Size(153, 34);
+            this.examInput.Size = new System.Drawing.Size(130, 34);
             this.examInput.TabIndex = 6;
             // 
             // 
@@ -171,11 +171,11 @@ namespace 批量导入程序重制版
             this.applicationInput.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(225)))), ((int)(((byte)(230)))));
             this.applicationInput.BorderHover = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
             this.applicationInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(65)))));
-            this.applicationInput.Location = new System.Drawing.Point(306, 31);
+            this.applicationInput.Location = new System.Drawing.Point(136, 31);
             this.applicationInput.Name = "applicationInput";
             this.applicationInput.PlaceholderText = "请输入申请单号";
             this.applicationInput.Radius = 7;
-            this.applicationInput.Size = new System.Drawing.Size(153, 34);
+            this.applicationInput.Size = new System.Drawing.Size(130, 34);
             this.applicationInput.TabIndex = 7;
             // 
             // examLabel
@@ -183,7 +183,7 @@ namespace 批量导入程序重制版
             this.examLabel.AutoSize = true;
             this.examLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
             this.examLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.examLabel.Location = new System.Drawing.Point(466, 11);
+            this.examLabel.Location = new System.Drawing.Point(272, 11);
             this.examLabel.Name = "examLabel";
             this.examLabel.Size = new System.Drawing.Size(56, 17);
             this.examLabel.TabIndex = 1;
@@ -199,9 +199,9 @@ namespace 批量导入程序重制版
             this.queryDataButton.ForeColor = System.Drawing.Color.White;
             this.queryDataButton.Icon = global::批量导入程序重制版.Properties.Resources.BtnSearch;
             this.queryDataButton.IconRatio = 0.9F;
-            this.queryDataButton.Location = new System.Drawing.Point(623, 71);
+            this.queryDataButton.Location = new System.Drawing.Point(682, 31);
             this.queryDataButton.Name = "queryDataButton";
-            this.queryDataButton.Size = new System.Drawing.Size(153, 43);
+            this.queryDataButton.Size = new System.Drawing.Size(124, 34);
             this.queryDataButton.TabIndex = 10;
             this.queryDataButton.Text = "查询数据";
             this.queryDataButton.Click += new System.EventHandler(this.queryDataButton_Click);
@@ -215,9 +215,9 @@ namespace 批量导入程序重制版
             this.uploadButton.ForeColor = System.Drawing.Color.White;
             this.uploadButton.Icon = global::批量导入程序重制版.Properties.Resources.BtnUpload;
             this.uploadButton.IconRatio = 0.9F;
-            this.uploadButton.Location = new System.Drawing.Point(782, 71);
+            this.uploadButton.Location = new System.Drawing.Point(812, 31);
             this.uploadButton.Name = "uploadButton";
-            this.uploadButton.Size = new System.Drawing.Size(153, 43);
+            this.uploadButton.Size = new System.Drawing.Size(124, 34);
             this.uploadButton.TabIndex = 11;
             this.uploadButton.Text = "导入数据";
             this.uploadButton.Click += new System.EventHandler(this.uploadButton_Click);
@@ -229,7 +229,7 @@ namespace 批量导入程序重制版
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.label1.Location = new System.Drawing.Point(10, 97);
+            this.label1.Location = new System.Drawing.Point(10, 76);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 17);
             this.label1.TabIndex = 13;
@@ -241,11 +241,11 @@ namespace 批量导入程序重制版
             this.selSystemId.BorderActive = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(157)))), ((int)(((byte)(143)))));
             this.selSystemId.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(225)))), ((int)(((byte)(230)))));
             this.selSystemId.BorderHover = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(157)))), ((int)(((byte)(143)))));
-            this.selSystemId.Location = new System.Drawing.Point(161, 31);
+            this.selSystemId.Location = new System.Drawing.Point(12, 31);
             this.selSystemId.Name = "selSystemId";
             this.selSystemId.PlaceholderText = "请选择系统标识";
             this.selSystemId.Radius = 7;
-            this.selSystemId.Size = new System.Drawing.Size(139, 34);
+            this.selSystemId.Size = new System.Drawing.Size(118, 34);
             this.selSystemId.TabIndex = 15;
             // 
             // label2
@@ -253,7 +253,7 @@ namespace 批量导入程序重制版
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.label2.Location = new System.Drawing.Point(158, 11);
+            this.label2.Location = new System.Drawing.Point(12, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 17);
             this.label2.TabIndex = 14;
